@@ -25,3 +25,29 @@
   }
   
   
+
+.iframe-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.iframe-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.iframe {
+  flex: 1;
+  margin-right: 10px;
+}
+
+/* .iframe:last-child {
+  margin-right: 0;
+} */
+
+h4 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
