@@ -4,7 +4,7 @@ import '../src/public/mainDashboard.css';
 
 const MainDashboard = () => {
   return (
-    <div className="App">
+    <div className="mainDashboardContainer">
       <Navigation />
       <div className="content">
         <h1>Main Dashboard</h1>
