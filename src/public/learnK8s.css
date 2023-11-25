@@ -1,0 +1,229 @@
+/* body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+} */
+
+body {
+  background-color: #393e46; /* Set the background color to dark gray */
+}
+
+.learnK8s {
+  display: flex;
+  height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* .navigation {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: #00adb5;
+  width: 200px; 
+} */
+
+.navigation {
+  flex: 0 0 10%;
+  background-color: rgba(220, 178, 228);
+  color: #393e46;
+  padding: 20px;
+  border: 2px solid #393e46;
+  border-radius: 20px;
+  margin: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.containerA {
+  flex: 0 0 60%;
+  background-color: #91abee;
+  color: #393e46;
+  padding: 20px;
+  border: 2px solid #393e46;
+  border-radius: 20px;
+  margin: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.cluster, .master-node {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.containerB {
+  flex: 0 0 20%; /* Changed width */
+  background-color: #91abee;
+  color: #393e46;
+  padding: 20px;
+  border: 2px solid #393e46;
+  border-radius: 20px;
+  margin: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.containerC {
+  /* width: 80%; */
+  margin: 0 auto; /* Center the container horizontally */
+  /* border: 2px solid pink; */
+  padding: 10px;
+  border-radius: 20px;
+  border: 2px solid #393e46;
+  padding-left: 20px;
+  background-color: #5c85ee; /* Light pink background color, you can change this */
+}
+
+.worker-node {
+  /* width: 80%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto; /* Center the container horizontally */
+  /* border: 2px solid pink; */
+  border-radius: 20px;
+  border: none;
+  padding-left: 20px;
+  background-color: #5c85ee; /* Light pink background color, you can change this */
+}
+
+.cluster {
+  width: 100%;
+}
+
+.containerD {
+  display: grid;
+  grid-template-columns: repeat(
+    4,
+    1fr
+  ); /* Divide Container D into 4 equal columns */
+  gap: 20px; /* Add a gap between the columns */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 10px;
+  /* border: 2px solid #69ffee; 
+  border-radius: 20px;  */
+  /* background-color: #2bb484;  */
+}
+
+.api-server,
+.scheduler,
+.etcd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #393e46;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #44eee1;
+}
+
+.controller-manager {
+  white-space: pre-line;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #393e46;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #44eee1;
+}
+
+.containerE {
+  display: grid;
+  grid-template-columns: repeat(
+    2,
+    1fr
+  ); /* Divide Container E into 2 equal columns */
+  gap: 20px; /* Add a gap between the columns */
+  /* border: 2px solid #393e46; */
+  /* border-radius: 20px; */
+  border: none;
+  /* padding: 10px; */
+  margin-top: 27px;
+  /* background-color: rgb(128, 242, 108);  */
+}
+
+.containerG {
+  flex: 1;
+  border: 2px solid #393e46;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: #5c85ee; /* Light pink background color, you can change this */
+}
+
+.containerF {
+  display: grid;
+  grid-template-rows: auto auto; /* 2 rows with automatic sizing */
+  grid-template-columns: auto auto; /* 2 columns with automatic sizing */
+  grid-auto-rows: 1fr; /* Each row will have the same height */
+  grid-auto-columns: 1fr; /* Each column will have the same width */
+  gap: 10px; /* Add a gap between the grid items */
+  /* border: 2px solid #393e46; */
+  /* border-radius: 20px; */
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  /* background-color: rgb(128, 242, 108);  */
+}
+
+.kubelet,
+.kube-proxy {
+  border: 2px solid #393e46;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: #44eee1; /* Blue background color */
+}
+
+.pod-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr; /* Create 3 rows with equal height */
+  gap: 10px;
+  border: 2px solid #393e46;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: #ebfd8a;
+}
+
+.container {
+  /* transform: translateX(15px); */
+  border: 2px solid #393e46;
+  border-radius: 20px;
+  background-color: #e99ee4;
+}
+
+.container-text {
+  padding-left: 15px;
+}
+
+.learnK8s {
+  display: flex;
+  height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Add the following CSS to your existing styles */
+
+.containerA:hover,
+.containerC:hover,
+.master-node:hover,
+.worker-node:hover,
+.cluster:hover,
+.containerD:hover,
+.api-server:hover,
+.scheduler:hover,
+.controller-manager:hover,
+.etcd:hover,
+.containerE:hover,
+.containerF:hover,
+.kubelet:hover,
+.kube-proxy:hover,
+.pod:hover {
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* ... (other styles remain unchanged) ... */
