@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-
+import Navigation from './components/Navigation.jsx';
+import '../src/public/register.css';
 const DBaordCreate = () => {
   const [apiUrl, setApiUrl] = useState('');
   const [dashboardName, setDashboardName] = useState('');
@@ -15,10 +16,11 @@ const DBaordCreate = () => {
   };
 
   return (
-    <div className="App">
-      <div className="content">
+      <div className="registerContainer">
+      <Navigation />
+      <div className='content'>
         <h1>Register Your K8s cluster</h1>
-        <form onSubmit={handleFormSubmit}>
+        <form className="content" onSubmit={handleFormSubmit}>
           <input
             type="text"  // Use type="text" for a general text input
             placeholder="API URL"
@@ -33,8 +35,8 @@ const DBaordCreate = () => {
           /> <br/>
           <button type="submit">Register</button>
         </form>
+        </div>
       </div>
-    </div>
   );
 };
 

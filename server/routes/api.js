@@ -14,6 +14,5 @@ router.get('/clusterview')
 
 router.get('/register')
 
-router.get('/clusterview')
 
 module.exports = router;

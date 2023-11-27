@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import MainDashboard from "./MainDashboard.js";
 import LearnK8s from "./LearnK8s.js";
 import ClusterView from "./ClusterView.js";
-import DBoardCreate from "./components/DBoardCreate.jsx"
+import DBoardCreate from "./DBoardCreate.js"
 
 const App = () => {
   return (

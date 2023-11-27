@@ -1,0 +1,28 @@
+.registerContainer {
+        display: flex;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .navigation {
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: #00adb5;
+  }
+  
+  .nav-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    color: #393e46;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .content {
+    flex: 1;
+    padding: 60px;
+    background: #393e46;
+    color: white;
+    display: flex;
+    flex-direction: column; 
+  }

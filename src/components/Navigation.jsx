@@ -29,6 +29,9 @@ const Navigation = () => {
       <Link to="/clusterview" className="nav-item third-color">
         Cluster View
       </Link>
+      <Link to="/register" className="nav-item third-color">
+        Register Cluster
+      </Link>
     </div>
   );
 };
