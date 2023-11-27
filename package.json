@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@kubernetes/client-node": "^0.20.0",
     "axios": "^1.6.2",
     "cors": "^2.8.5",
     "js-cookie": "^3.0.5",
