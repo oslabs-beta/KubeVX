@@ -1,8 +1,11 @@
 const express = require('express');
+const addClusterController = require('../controllers/addClusterController')
 const grafanaController = require('../controllers/grafanaController');
 const learnK8sController = require('../controllers/learnK8sController');
-const clusterController = require('../controllers/clusterController')
+const clusterController = require('../controllers/clusterController');
 const router = express.Router();
+
+router.post('/addcluster', addClusterController.add)
 
 router.get('/metrics', grafanaController.getMetrics);
 

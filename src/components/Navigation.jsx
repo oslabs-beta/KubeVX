@@ -21,6 +21,9 @@ const Navigation = () => {
     <div className="navigation">
       <h2 className="nav-item">Kube VX</h2>
       <Link to="/" className="nav-item second-color">
+        Add Cluster
+      </Link>
+      <Link to="/maindashboard" className="nav-item second-color">
         Main Dashboard
       </Link>
       <Link to="/learnk8s" className="nav-item first-color">
