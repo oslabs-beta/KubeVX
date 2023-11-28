@@ -42,3 +42,16 @@
 .register-form button:hover {
   background-color: #142E4D; /* Darker on hover */
 }
+
+.back-to-login {
+  text-align: center;
+}
+
+.back-to-login a {
+  color: #5585B4;
+  text-decoration: none;
+}
+
+.back-to-login a:hover {
+  text-decoration: underline;
+}

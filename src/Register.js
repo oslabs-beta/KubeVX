@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import '../src/public//register.css'; 
 
 const Register = () => {
@@ -56,6 +56,9 @@ const Register = () => {
           onChange={(e) => setPassword(e.target.value)} 
         />
         <button type="submit" className="action-button">Register</button>
+        <div className="back-to-login">
+          <Link to="/login">Back to login</Link>
+        </div>
       </form>
     </div>
   );
