@@ -3,7 +3,7 @@ import React from 'react';
 const NodeExporter = () => {
   return (
     <div className="section-container">
-      <h4>NodeExporter</h4>
+      <h4>Node</h4>
       <div className="iframe-row">
              <iframe
             title="Grafana Dashboard 5"

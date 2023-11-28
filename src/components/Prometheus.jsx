@@ -3,7 +3,7 @@ import React from 'react';
 const Prometheus = () => {
   return (
     <div className="section-container">
-      <h4>Prometheus</h4>
+      <h4>Port</h4>
       <div className="iframe-row">
           <iframe
             title="Grafana Dashboard 1"

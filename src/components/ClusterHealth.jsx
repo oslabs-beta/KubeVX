@@ -3,7 +3,7 @@ import React from 'react';
 const ClusterHealth = () => {
   return (
     <div className="section-container">
-      <h4>Cluster Health</h4>
+      <h4>Cluster</h4>
       <div className="iframe-row">
         <iframe
             title="Grafana Dashboard 1"
