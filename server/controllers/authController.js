@@ -43,7 +43,18 @@ const authController = {
     } catch (error) {
       res.status(500).json({ message: 'Error registering new user', error: error.message });
     }
+  },
+
+  logout(req, res) {
+    req.session.destroy((err) => {
+      if (err) {
+        res.status(500).send('Error logging out');
+      } else {
+        res.send('Logout successful');
+      }
+    });
   }
+
 };
 
 module.exports = authController;

@@ -26,6 +26,7 @@ const Register = () => {
       } else {
         const data = await response.json();
         console.error('Registration failed:', await response.json());
+        console.error('Registration failed:', data);
       }
     } catch (error) {
       console.error('Error during registration:', error);

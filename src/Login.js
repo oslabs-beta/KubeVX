@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useHistory, Link } from 'react-router-dom';
+import { UserContext } from './UserContext';
 import '../src/public/login.css'; 
 
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const { user, setUser } = useContext(UserContext);
   const history = useHistory();
 
   const handleLogin = async (e) => {
@@ -20,6 +22,7 @@ const Login = () => {
   
         if (response.status === 200) {
           console.log('Login successful');
+          setUser({ username }); // Set user in context
           history.push('/'); // Redirect to the main dashboard
         } else {
           const data = await response.json();
@@ -33,8 +36,9 @@ const Login = () => {
     };
 
     const navigateToRegister = () => {
-        history.push('/register'); // Navigate to the register route
+      history.push('/register'); // Navigate to the register route
     };
+
 
   return (
     <div className="login-container">
