@@ -7,21 +7,21 @@ const ClusterHealth = () => {
       <div className="iframe-row">
         <iframe
             title="Grafana Dashboard 1"
-            src="http://localhost:3000/d-solo/4XuMd2Iiz/kubernetes-cluster-prometheus?orgId=1&from=1700696606433&to=1700698406434&panelId=5"
+            src="http://localhost:3000/d-solo/os6Bh8Omk/kubernetes-cluster-prometheus?orgId=1&from=1700696606433&to=now&panelId=5"
             width="400"
             height="200"
         ></iframe>
 
         <iframe
             title="Grafana Dashboard 2"
-            src="http://localhost:3000/d-solo/4XuMd2Iiz/kubernetes-cluster-prometheus?orgId=1&from=1700696674389&to=1700698474389&panelId=6"
+            src="http://localhost:3000/d-solo/os6Bh8Omk/kubernetes-cluster-prometheus?orgId=1&from=1700696674389&to=now&panelId=6"
             width="400"
             height="200"
         ></iframe>
 
         <iframe
             title="Grafana Dashboard 3"
-            src="http://localhost:3000/d-solo/4XuMd2Iiz/kubernetes-cluster-prometheus?orgId=1&from=1700705850798&to=1700707650799&panelId=7"
+            src="http://localhost:3000/d-solo/os6Bh8Omk/kubernetes-cluster-prometheus?orgId=1&from=1700705850798&to=now&panelId=7"
             width="400"
             height="200"
         ></iframe>
