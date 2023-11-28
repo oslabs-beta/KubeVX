@@ -1,36 +1,27 @@
-// import React from 'react';
-
-// const Navigation = () => {
-//   return (
-//     <div className="navigation">
-//       <h2 className="nav-item">Kube XV</h2>
-//       <div className="nav-item second-color">Main Dashboard</div>
-//       <div className="nav-item first-color">Learning Kubernetes</div>
-//       <div className="nav-item third-color">Cluster View</div>
-//     </div>
-//   );
-// };
-
-// export default Navigation;
-
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../UserContext';
 
 const Navigation = () => {
-  return (
-    <div className="navigation">
-      <h2 className="nav-item">Kube VX</h2>
-      <Link to="/" className="nav-item second-color">
-        Main Dashboard
-      </Link>
-      <Link to="/learnk8s" className="nav-item first-color">
-        Learn Kubernetes
-      </Link>
-      <Link to="/clusterview" className="nav-item third-color">
-        Cluster View
-      </Link>
+  const { user } = useContext(UserContext);
+
+  
+return (
+  <div className="navigation">
+    <h2 className="nav-item">Kube VX</h2>
+    {user && <div className="nav-item third-color">Hi {user.username}!</div>}
+    <Link to="/" className="nav-item second-color">Main Dashboard</Link>
+    <Link to="/learnk8s" className="nav-item first-color">Learn Kubernetes</Link>
+    <Link to="/clusterview" className="nav-item third-color">Cluster View</Link>
+    <div className="nav-bottom">
+      {user ? (
+        <Link to="/logout" className="nav-item third-color">Logout</Link>
+      ) : (
+        <Link to="/login" className="nav-item third-color">Login</Link>
+      )}
     </div>
-  );
+  </div>
+);
 };
 
 export default Navigation;
