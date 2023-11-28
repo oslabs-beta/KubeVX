@@ -1,44 +1,67 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import '../src/public/login.css'; 
 
-
 const Login = () => {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
-    const history = useHistory();
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const history = useHistory();
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-
-        // Make a POST request to your server
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    try {
         const response = await fetch('http://localhost:3001/login', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ username, password })
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ username, password }),
         });
-
-        if (response.ok) {
-            // Handle successful login here
-            history.push('/'); // Redirect to dashboard or home page
+  
+        if (response.status === 200) {
+          console.log('Login successful');
+          history.push('/'); // Redirect to the main dashboard
         } else {
-            // Handle errors here
-            alert('Login failed!');
+          const data = await response.json();
+          console.error('Login failed:', data.message);
+          // Optionally handle the error in UI
         }
+      } catch (error) {
+        console.error('Error during login:', error);
+        // Optionally handle the error in UI
+      }
     };
 
-    return (
-        <div>
-            <h2>Login</h2>
-            <form className="login-form" onSubmit={handleSubmit}>
-                <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Username" required />
-                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" required />
-                <button type="submit">Login</button>
-            </form>
+    const navigateToRegister = () => {
+        history.push('/register'); // Navigate to the register route
+    };
+
+  return (
+    <div className="login-container">
+      <form className="login-form" onSubmit={handleLogin}>
+        <h2>Login</h2>
+        <input 
+          type="text" 
+          placeholder="Username" 
+          value={username} 
+          onChange={(e) => setUsername(e.target.value)} 
+        />
+        <input 
+          type="password" 
+          placeholder="Password" 
+          value={password} 
+          onChange={(e) => setPassword(e.target.value)} 
+        />
+        <button type="submit" className="action-button">Login</button>
+        <button type="button" onClick={navigateToRegister} className="action-button">
+          Create a new account
+        </button>
+        <div className="back-to-dashboard">
+          <Link to="/">Back to Main Dashboard</Link>
         </div>
-    );
+      </form>
+    </div>
+  );
 };
 
 export default Login;

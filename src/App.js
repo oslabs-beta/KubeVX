@@ -4,6 +4,7 @@ import MainDashboard from "./MainDashboard.js";
 import LearnK8s from "./LearnK8s.js";
 import ClusterView from "./ClusterView.js";
 import Login from "./Login.js"; 
+import Register from "./Register.js";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
           <Route exact path="/learnk8s" component={LearnK8s} />
           <Route exact path="/clusterview" component={ClusterView} />
           <Route exact path="/login" component={Login} />
+          <Route exact path="/register" component={Register} />
         </Switch>
       </div>
     </Router>
