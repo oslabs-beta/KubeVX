@@ -37,7 +37,8 @@ const KubernetesFlow = () => {
             nodes.push({
                 id: `node-${index}`,
                 title: `Node: ${node}`, // label would be the same thing
-                color: '#64C2A6', // idk what color this is
+                // color: '#64C2A6', // idk what color this is
+                color: 'MidnightBlue',
                 shape: 'box',
                 size: 200
             });
@@ -48,7 +49,8 @@ const KubernetesFlow = () => {
             nodes.push({
                 id: `pod-${index}`,
                 title: `Pod: ${pod.name}`,
-                color: '#FFD86E',
+                // color: '#FFD86E',
+                color: 'RoyalBlue',
                 shape: 'circle',
             });
 
@@ -69,7 +71,8 @@ const KubernetesFlow = () => {
             nodes.push({
                 id: `service-${index}`,
                 title: `Service: ${service}`,
-                color: '#6DAFFF',
+                // color: '#6DAFFF',
+                color: 'SeaGreen',
                 shape: 'diamond',
             });
             
@@ -92,7 +95,8 @@ const KubernetesFlow = () => {
             nodes.push({
                 id: `deployment-${index}`,
                 title: `Deployment: ${deployment}`,
-                color: '#FFA07A',
+                // color: '#FFA07A',
+                color: 'SpringGreen',
                 shape: 'star',
             });
 
@@ -140,7 +144,9 @@ const KubernetesFlow = () => {
     return (
       <div className='cluster-container'>
         <Navigation className='navigation'/>
-        <Graph graph={ graphData } options={graphOptions} events={events} />
+        <div className='container'>
+            <Graph graph={ graphData } options={graphOptions} events={events}/>
+        </div>
       </div>
     );
 };
