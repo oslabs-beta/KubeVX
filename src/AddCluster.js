@@ -81,7 +81,7 @@ const AddCluster = () => {
           </label>
           <br />
           <label>
-            Service Portex
+            Service Port
             <input
               type="number"
               name="servicePort"

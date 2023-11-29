@@ -21,6 +21,20 @@
 .content {
   flex: 1;
   padding: 20px;
-  background: #393e46;
-  color: white;
+  background: #08102f;
+  color: #f9f9ef;
+}
+
+.section-container {
+  margin-top: 20px;
+}
+
+.iframe-row {
+  display: flex;
+  gap: 100px;
+}
+
+iframe {
+  border: 1px solid #7a7a78;
+  border-radius: 10px;
 }

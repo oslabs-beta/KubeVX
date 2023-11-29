@@ -6,27 +6,26 @@ const Prometheus = () => {
     <div className="section-container">
       <h4>Pod</h4>
       <div className="iframe-row">
-          <iframe
-            title="Grafana Dashboard 1"
-            src="http://localhost:3000/d-solo/kubeVX/prometheus-2-0-overview?orgId=1&refresh=5s&from=1700697048242&to=now&panelId=14"
-            width="400"
-            height="200"
-          ></iframe>
+        <iframe
+          title="Grafana Dashboard 1"
+          src="http://localhost:3000/d-solo/os6Bh8Omk/kubernetes-cluster?orgId=1&from=1701236854560&to=1701237279113&panelId=5"
+          width="400"
+          height="200"
+        ></iframe>
 
-          <iframe
-            title="Grafana Dashboard 2"
-            src="http://localhost:3000/d-solo/kubeVX/prometheus-2-0-overview?orgId=1&refresh=5s&from=1700697082354&to=now&panelId=5"
-            width="400"
-            height="200"
-          ></iframe>
+        <iframe
+          title="Grafana Dashboard 2"
+          src="http://localhost:3000/d-solo/os6Bh8Omk/kubernetes-cluster-prometheus?orgId=1&refresh=5s&from=1701215662883&to=now&panelId=14"
+          width="400"
+          height="200"
+        ></iframe>
 
-          <iframe
-            title="Grafana Dashboard 3"
-            src="http://localhost:3000/d-solo/kubeVX/prometheus-2-0-overview?orgId=1&refresh=5s&from=1700705495198&to=now&panelId=24"
-            width="400"
-            height="200"
-          ></iframe>
-
+        <iframe
+          title="Grafana Dashboard 3"
+          src="http://localhost:3000/d-solo/rYdddlPWk/node-exporter-full?orgId=1&from=1701152616604&to=1701239016604&panelId=74"
+          width="400"
+          height="200"
+        ></iframe>
       </div>
     </div>
   );
