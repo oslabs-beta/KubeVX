@@ -14,9 +14,10 @@ const KubernetesFlow = () => {
           .then(response => response.json())
           .then(data => {
             //Process the data
+            // console.log('Data:', data)
             const { nodes, edges } = processClusterData(data);
             //console log!
-            console.log('Data:', data);
+            //console.log();
 
             setGraphData({ nodes, edges });
             setLoading(false);
@@ -35,10 +36,10 @@ const KubernetesFlow = () => {
         clusterData.nodes.forEach((node, index) => {
             nodes.push({
                 id: `node-${index}`,
-                //label: `Node: ${node}`,
+                title: `Node: ${node}`, // label would be the same thing
                 color: '#64C2A6', // idk what color this is
                 shape: 'box',
-                size: 80
+                size: 200
             });
         });
 
@@ -46,9 +47,9 @@ const KubernetesFlow = () => {
         clusterData.pods.forEach((pod, index) => {
             nodes.push({
                 id: `pod-${index}`,
-                // //label: `Pod: ${pod.name}`,
+                title: `Pod: ${pod.name}`,
                 color: '#FFD86E',
-                shape: 'circle'
+                shape: 'circle',
             });
 
             // Create edges from Node to Pod
@@ -57,7 +58,7 @@ const KubernetesFlow = () => {
                 edges.push({ 
                     from: `node-${nodeIndex}`, 
                     to: `pod-${index}`, 
-                    length: 200,
+                    length: 100,
                     arrows: 'to'
                 });
             }
@@ -67,9 +68,9 @@ const KubernetesFlow = () => {
         clusterData.services.forEach((service, index) => {
             nodes.push({
                 id: `service-${index}`,
-                //label: `Service: ${service}`,
+                title: `Service: ${service}`,
                 color: '#6DAFFF',
-                shape: 'diamond'
+                shape: 'diamond',
             });
             
             // Create edges from Service to Pod
@@ -90,9 +91,9 @@ const KubernetesFlow = () => {
         clusterData.deployments.forEach((deployment, index) => {
             nodes.push({
                 id: `deployment-${index}`,
-                //label: `Deployment: ${deployment}`,
+                title: `Deployment: ${deployment}`,
                 color: '#FFA07A',
-                shape: 'star' 
+                shape: 'star',
             });
 
             // Create edges from Deployment to Pod (based on naming convention or //label matching)
@@ -117,27 +118,29 @@ const KubernetesFlow = () => {
         edges: {
             color: '#000000'
         },
-        height: '600px',
+        height: '1000px',
         interaction: {
             hover: true,
+            tooltipDelay: 250,
         }
 
       };
 
+      const events = {
+        select: function(event) {
+            var { nodes, edges } = event;
+        }
+
+      }
+
     if(loading) {
         return <div>Loading...</div>
     }
-    const containerStyle = {
-      display: 'flex',
-      width: '100%',
-      height: '600px',
-      border: '1px solid black'
-    };
     // console.log('elements:', elements)
     return (
       <div className='cluster-container'>
         <Navigation className='navigation'/>
-        <Graph graph={ graphData } options={graphOptions} />
+        <Graph graph={ graphData } options={graphOptions} events={events} />
       </div>
     );
 };
