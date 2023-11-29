@@ -8,7 +8,7 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.navigation {
+/* .navigation {
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -20,7 +20,7 @@ body {
   font-size: 16px;
   font-weight: bold; 
   align-self: center; 
-}
+} */
 
 .containerA {
   flex: 0 0 60%;
@@ -42,7 +42,7 @@ body {
 
 
 .containerB {
-  flex: 0 0 20%; /* Changed width */
+  flex: 0 0 18%; /* Changed width */
   background-color: #91abee;
   color: #393e46;
   padding: 20px;

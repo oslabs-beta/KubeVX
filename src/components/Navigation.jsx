@@ -9,9 +9,10 @@ return (
   <div className="navigation">
     <h2 className="nav-top-item">Kube VX</h2>
     {user && <div className="nav-greetings">Hi {user.username}!</div>}
-    <Link to="/" className="nav-item">Main Dashboard</Link>
-    <Link to="/learnk8s" className="nav-item">Learn Kubernetes</Link>
+    <Link to="/" className="nav-item">Add Cluster</Link>
+    <Link to="/maindashboard" className="nav-item">Dashboard</Link>
     <Link to="/clusterview" className="nav-item">Cluster View</Link>
+    <Link to="/learnk8s" className="nav-item">Learn Kubernetes</Link>
     <div className="nav-bottom">
       {user ? (
         <Link to="/logout" className="nav-item">Logout</Link>
