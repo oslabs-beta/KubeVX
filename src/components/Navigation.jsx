@@ -30,6 +30,9 @@ const { user } = useContext(UserContext);
         <Link to="/login" className="nav-item third-color">Login</Link>
       )}
     </div>
+      <Link to="/register" className="nav-item third-color">
+        Register
+      </Link>
   </div>
 );
 };
