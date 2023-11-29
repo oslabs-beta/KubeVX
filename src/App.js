@@ -12,21 +12,21 @@ import DBoardCreate from "./DBoardCreate.js"
 
 const App = () => {
   return (
-    <UserProvider> 
-    <Router>
-      <div>
-        <Switch>
-          <Route exact path="/" component={AddCluster} />
-          <Route exact path="/maindashboard" component={MainDashboard} />
-          <Route exact path="/learnk8s" component={LearnK8s} />
-          <Route exact path="/clusterview" component={ClusterView} />
-          {/* <Route exact path="/dashboard" component={DBoardCreate} /> */}
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/register" component={Register} />
-          <Route exact path="/logout" component={Logout} />
-        </Switch>
-      </div>
-    </Router>
+    <UserProvider>
+      <Router>
+        <div>
+          <Switch>
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/register" component={Register} />
+            <Route exact path="/logout" component={Logout} />
+            <Route exact path="/" component={AddCluster} />
+            <Route exact path="/maindashboard" component={MainDashboard} />
+            <Route exact path="/learnk8s" component={LearnK8s} />
+            <Route exact path="/clusterview" component={ClusterView} />
+            {/* <Route exact path="/dashboard" component={DBoardCreate} /> */}
+          </Switch>
+        </div>
+      </Router>
     </UserProvider>
   );
 };
