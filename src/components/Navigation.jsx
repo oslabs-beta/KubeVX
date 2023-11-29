@@ -30,7 +30,7 @@ const { user } = useContext(UserContext);
       )}
     </div>
       <Link to="/register" className="nav-item third-color">
-        Register Cluster
+        Register
       </Link>
   </div>
 );

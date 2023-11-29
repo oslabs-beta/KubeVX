@@ -2,7 +2,6 @@ const express = require('express');
 const addClusterController = require('../controllers/addClusterController')
 const grafanaController = require('../controllers/grafanaController');
 const learnK8sController = require('../controllers/learnK8sController');
-const registerController = require('../controllers/registerController')
 const authController = require('../controllers/authController');
 const clusterController = require('../controllers/clusterController')
 
@@ -25,7 +24,7 @@ router.post('/register', authController.register);
 router.get('/logout', authController.logout);
 
 
-router.get('/register')
+// router.get('/register')
 
 
 module.exports = router;
