@@ -6,10 +6,15 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
   
-.navigation {
+/* .navigation {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    background: #00adb5;
-}
-
+    background: #285582;
+    width: 220px;
+    height: 100vh;
+    border-radius: 15px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+  } */
