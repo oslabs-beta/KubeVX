@@ -15,7 +15,7 @@ const MainDashboard = () => {
         <ClusterHealth />
         <NodeExporter />
         <Prometheus />
-        <DaemonSet/>
+        <DaemonSet />
       </div>
     </div>
   );
