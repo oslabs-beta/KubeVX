@@ -5,6 +5,10 @@
     border: 1px solid black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.container {
+    background-color: #FAFAF8;
+}
   
 .navigation {
     display: flex;
