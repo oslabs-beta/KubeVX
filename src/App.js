@@ -6,8 +6,8 @@ import LearnK8s from "./LearnK8s.js";
 import ClusterView from "./ClusterView.js";
 import Login from "./Login.js"; 
 import Register from "./Register.js";
-import Logout from "./Logout.js"; 
-import AddCluster from "./AddCluster.js";
+import AddCluster from "./AddCluster.js"
+import DBoardCreate from "./DBoardCreate.js"
 
 const App = () => {
   return (
@@ -19,6 +19,7 @@ const App = () => {
           <Route exact path="/maindashboard" component={MainDashboard} />
           <Route exact path="/learnk8s" component={LearnK8s} />
           <Route exact path="/clusterview" component={ClusterView} />
+          {/* <Route exact path="/dashboard" component={DBoardCreate} /> */}
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/logout" component={Logout} />
