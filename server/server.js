@@ -1,13 +1,31 @@
 const express = require('express');
 const router = require('./routes/api');
 const prometheus = require('prom-client');
+const session = require('express-session');
+const MongoStore = require('connect-mongo');
 const cors = require('cors');
 const path = require('path');
+
 
 const app = express();
 const port = 3001;
 
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:7070',
+  credentials: true
+}));
+
+app.use(session({
+  secret: 'hardcoded_secret',
+  resave: false,
+  saveUninitialized: false,
+  store: MongoStore.create({
+    mongoUrl: 'mongodb+srv://kubevx:letmein123@cluster0.zvkmoiz.mongodb.net/?retryWrites=true&w=majority'
+  }),
+  cookie: {
+    maxAge: 1000 * 60 * 60 * 24
+  }
+}));
 
 // HANDLE PARSING REQUEST BODY
 app.use(express.json());

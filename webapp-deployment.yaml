@@ -3,10 +3,10 @@ kind: Deployment
 metadata:
   name: webapp-deployment
   annotations:
-    prometheus.io/scrape: "true"
-    prometheus.io/port: "80"
+    prometheus.io/scrape: 'true'
+    prometheus.io/port: '80'
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: webapp
@@ -16,7 +16,7 @@ spec:
         app: webapp
     spec:
       containers:
-      - name: webapp-container
-        image: nginx:latest
-        ports:
-        - containerPort: 80
+        - name: webapp-container
+          image: nginx:latest
+          ports:
+            - containerPort: 80

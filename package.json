@@ -2,13 +2,18 @@
   "dependencies": {
     "@kubernetes/client-node": "^0.20.0",
     "axios": "^1.6.2",
+    "bcrypt": "^5.1.1",
+    "connect-mongo": "^5.1.0",
     "cors": "^2.8.5",
+    "express-session": "^1.17.3",
     "js-cookie": "^3.0.5",
     "mongoose": "^8.0.0",
     "multer": "^1.4.5-lts.1",
     "prom-client": "^15.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-flow-renderer": "^10.3.17",
+    "react-graph-vis": "^1.0.7",
     "react-router-dom": "^5.3.4"
   },
   "devDependencies": {
