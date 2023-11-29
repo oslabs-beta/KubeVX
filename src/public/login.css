@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #080D1D; 
+  background-color: #08102F; 
   font-family: Verdana, Geneva, Tahoma, sans-serif; /* Consistent font */
 }
 
@@ -17,7 +17,7 @@
 
 .login-form h2 {
   margin-bottom: 20px;
-  color: #080D1D; /* Dark color for the heading */
+  color: #08102F; /* Dark color for the heading */
 }
 
 .login-form input {
@@ -34,21 +34,22 @@
   margin-bottom: 10px;
   border: none;
   border-radius: 15px;
-  background-color: #6CA9E5; /* Primary button color */
+  background-color: #6ca9e5; /* Primary button color */
   color: white;
   cursor: pointer;
 }
 
 .login-form button:hover {
-  background-color: #3080CC; /* Darker on hover */
+  background-color: #3080cc; /* Darker on hover */
 }
 
 .back-to-dashboard {
+  margin-top: 20px;
   text-align: center;
 }
 
 .back-to-dashboard a {
-  color: #6CA9E5;
+  color: #6CA9E5; /* Same as button color for consistency */
   text-decoration: none;
 }
 
