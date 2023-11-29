@@ -7,7 +7,7 @@ import ClusterView from "./ClusterView.js";
 import Login from "./Login.js"; 
 import Register from "./Register.js";
 import Logout from "./Logout.js"; 
-
+import AddCluster from "./AddCluster.js";
 
 const App = () => {
   return (
@@ -15,7 +15,8 @@ const App = () => {
     <Router>
       <div>
         <Switch>
-          <Route exact path="/" component={MainDashboard} />
+          <Route exact path="/" component={AddCluster} />
+          <Route exact path="/maindashboard" component={MainDashboard} />
           <Route exact path="/learnk8s" component={LearnK8s} />
           <Route exact path="/clusterview" component={ClusterView} />
           <Route exact path="/login" component={Login} />
