@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #0a1439;
+  background-color: #08102F; 
   font-family: Verdana, Geneva, Tahoma, sans-serif; /* Consistent font */
 }
 
@@ -17,7 +17,7 @@
 
 .login-form h2 {
   margin-bottom: 20px;
-  color: #080d1d; /* Dark color for the heading */
+  color: #08102F; /* Dark color for the heading */
 }
 
 .login-form input {
@@ -44,11 +44,12 @@
 }
 
 .back-to-dashboard {
+  margin-top: 20px;
   text-align: center;
 }
 
 .back-to-dashboard a {
-  color: #6ca9e5;
+  color: #6CA9E5; /* Same as button color for consistency */
   text-decoration: none;
 }
 
