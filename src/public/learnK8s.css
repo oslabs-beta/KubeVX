@@ -1,12 +1,5 @@
-/* body,
-html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-} */
-
 body {
-  background-color: #393e46; /* Set the background color to dark gray */
+  background-color: #08102F;
 }
 
 .learnK8s {
@@ -15,24 +8,18 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* .navigation {
+.navigation {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  background: #00adb5;
-  width: 200px; 
-} */
-
-.navigation {
-  flex: 0 0 10%;
-  background-color: rgba(220, 178, 228);
-  color: #393e46;
-  padding: 20px;
-  border: 2px solid #393e46;
-  border-radius: 20px;
-  margin: 10px;
+  background: #6CA9E5;
+  width: 220px; 
+  height: 610px;
+  border-radius: 15px;
+  margin: 5px;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: bold; 
+  align-self: center; 
 }
 
 .containerA {
