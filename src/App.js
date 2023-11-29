@@ -6,7 +6,6 @@ import LearnK8s from "./LearnK8s.js";
 import ClusterView from "./ClusterView.js";
 import Login from "./Login.js"; 
 import Register from "./Register.js";
-import Logout from "./Logout.js"; 
 import AddCluster from "./AddCluster.js"
 import DBoardCreate from "./DBoardCreate.js"
 

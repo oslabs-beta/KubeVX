@@ -1,25 +1,73 @@
+body {
+  background-color: #08102f;
+}
+
 .addClusterContainer {
   display: flex;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #08102f;
 }
 
 .navigation {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  background: #00adb5;
+  background: #6ca9e5;
+  height: 550px;
 }
 
 .nav-item {
   padding: 10px;
   margin-bottom: 10px;
-  color: #393e46;
+  color: #08102f;
   cursor: pointer;
   text-decoration: none;
 }
 
 .formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 500px;
   padding: 40px;
   border-radius: 30px;
-  border: 1px solid #ccc; /* Optionally, add a border for better visibility */
+  border: 1px solid #6ca9e5;
+  background-color: #fafaf8;
+  margin: 20px 500px;
+}
+
+.formContainer h1 {
+  color: #08102f; /* Text color for the heading */
+}
+
+.formContainer label {
+  color: #08102f; /* Text color for labels */
+}
+
+.formContainer input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #393e46;
+  border-radius: 15px;
+  /* background-color: #08102F; */
+  color: #08102f;
+}
+
+.formContainer button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  background-color: #287ece;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.formContainer button:hover {
+  background-color: #21619e;
 }
