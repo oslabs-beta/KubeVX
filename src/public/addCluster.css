@@ -2,7 +2,7 @@ body {
   background-color: #08102f;
 }
 
-.addClusterContainer {
+/* .addClusterContainer {
   display: flex;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: #08102f;
@@ -22,7 +22,38 @@ body {
   color: #08102f;
   cursor: pointer;
   text-decoration: none;
-}
+} */
+
+.addClusterContainer {
+    display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #08102f;
+  }
+  
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: rgba(108, 169, 229, 0.3); /* Use rgba to set background color with opacity */
+    height: 550px;
+  }
+  
+  .nav-item {
+    width: 100%; /* Each nav-item takes the entire width of the navigation bar */
+    padding: 10px;
+    align-self: center;
+    margin-bottom: 10px;
+    color: #f9f9ef; /* Set text color to off white */
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Add transition for smoother color change */
+    flex-grow: 1; /* Allow each item to grow and fill the available height */
+  }
+  
+  .nav-item:hover {
+    background-color: rgba(108, 169, 229, 0.7); /* Change background color on hover */
+  }
+  
 
 .formContainer {
   display: flex;
