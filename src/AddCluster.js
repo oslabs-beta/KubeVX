@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import Navigation from './components/Navigation.jsx';
 import '../src/public/addCluster.css';
 
 const AddCluster = () => {
+  const history = useHistory();
   const [formData, setFormData] = useState({
     replicas: 2,
     image: 'nginx:latest',
@@ -30,6 +32,7 @@ const AddCluster = () => {
       if (response.ok) {
         const responseData = await response.json();
         console.log(responseData);
+        history.push('/maindashboard');
       } else {
         console.error('Failed to update YAML files');
       }
@@ -40,12 +43,15 @@ const AddCluster = () => {
 
   return (
     <div className="addClusterContainer">
-      <Navigation />
+      <div>
+        <Navigation />
+      </div>
+
       <div className="formContainer">
         <h1>Add Cluster</h1>
         <form onSubmit={handleSubmit}>
           <label>
-            Replicas:
+            Replicas
             <input
               type="number"
               name="replicas"
@@ -55,7 +61,7 @@ const AddCluster = () => {
           </label>
           <br />
           <label>
-            Image:
+            Image
             <input
               type="text"
               name="image"
@@ -65,7 +71,7 @@ const AddCluster = () => {
           </label>
           <br />
           <label>
-            Container Port:
+            Container Port
             <input
               type="number"
               name="containerPort"
@@ -75,7 +81,7 @@ const AddCluster = () => {
           </label>
           <br />
           <label>
-            Service Port:
+            Service Portex
             <input
               type="number"
               name="servicePort"
@@ -84,7 +90,7 @@ const AddCluster = () => {
             />
           </label>
           <br />
-          <button type="submit">Update YAML</button>
+          <button type="submit">Add</button>
         </form>
       </div>
     </div>

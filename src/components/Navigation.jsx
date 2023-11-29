@@ -13,14 +13,15 @@ const { user } = useContext(UserContext);
         Add Cluster
       </Link>
       <Link to="/maindashboard" className="nav-item second-color">
-        Main Dashboard
-      </Link>
-      <Link to="/learnk8s" className="nav-item first-color">
-        Learn Kubernetes
+        Dashboard
       </Link>
       <Link to="/clusterview" className="nav-item third-color">
         Cluster View
       </Link>
+      <Link to="/learnk8s" className="nav-item first-color">
+        Learn Kubernetes
+      </Link>
+     
 
     <div className="nav-bottom">
       {user ? (
