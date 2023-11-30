@@ -11,7 +11,7 @@ const MainDashboard = () => {
     <div className="mainDashboardContainer">
       <Navigation />
       <div className="content">
-        <h1>Main Dashboard</h1>
+      <h1 className="dashboard-title">Dashboard</h1>
         <ClusterHealth />
         <NodeExporter />
         <Prometheus />
