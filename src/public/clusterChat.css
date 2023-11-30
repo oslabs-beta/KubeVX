@@ -1,0 +1,54 @@
+/* Add this CSS to your clusterView.css file */
+
+/* .chat-container {
+  background-color: #fafaf8;
+  height: 96vh;
+  width: 35vw;
+  margin-top: 10px;
+  border: 1px;
+  border-radius: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  max-height: 400px;
+}
+
+.message {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 20px;
+  max-width: 60%;
+}
+
+.ai {
+  background-color: #e0e0e0;
+  align-self: flex-start;
+}
+
+.user {
+  background-color: #4c9aff;
+  color: white;
+  align-self: flex-end;
+}
+
+.input-form {
+  display: flex;
+  margin-top: auto;
+}
+
+.input-form input {
+  flex-grow: 1;
+  margin-right: 5px;
+}
+
+.input-form button {
+  flex-shrink: 0;
+} */
