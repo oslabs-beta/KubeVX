@@ -2,7 +2,7 @@ body {
   background-color: #08102f;
 }
 
-.addClusterContainer {
+/* .addClusterContainer {
   display: flex;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: #08102f;
@@ -22,7 +22,37 @@ body {
   color: #08102f;
   cursor: pointer;
   text-decoration: none;
-}
+} */
+
+.addClusterContainer {
+    display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #08102f;
+  }
+  
+  /* .navigation {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: rgba(108, 169, 229, 0.3); 
+    height: 550px;
+  }
+  
+  .nav-item {
+    width: 100%; 
+    align-self: center;
+    margin-bottom: 10px;
+    color: #f9f9ef; 
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease; 
+    flex-grow: 1; 
+  }
+  
+  .nav-item:hover {
+    background-color: rgba(108, 169, 229, 0.7); 
+  } */
+  
 
 .formContainer {
   display: flex;
