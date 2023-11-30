@@ -1,14 +1,11 @@
 body {
   background-color: #08102f;
-  max-width: 100vw;
-  overflow-x: hidden;
 }
 
 .mainDashboardContainer {
-  height: 90vh;
   display: flex;
   align-self: center;
-  margin-right: 100px;
+  /* margin-left: 200px; */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -20,7 +17,7 @@ body {
   width: 220px;
   height: 100vh;
   border-radius: 15px;
-  margin: 10px;
+  margin: 5px;
   font-size: 16px;
   font-weight: bold;
 }
@@ -40,11 +37,11 @@ body {
 .nav-top-item::before {
   content: '';
   display: block;
-  width: 60px; 
-  height: 60px; 
+  width: 60px; /* Width of the round image */
+  height: 60px; /* Height of the round image */
   background-image: url('../public/assets/1.jpg');
-  background-size: cover;
-  border-radius: 50%; 
+  background-size: cover; /* This will cover the entire area of the pseudo-element */
+  border-radius: 50%; /* This makes it round */
   position: absolute;
   left: 0;
   top: 50%;
@@ -54,7 +51,7 @@ body {
 /* .nav-item {
   padding: 10px;
   margin-bottom: 10px;
-  color: #f9f9ef;
+  color: #08102f;
   cursor: pointer;
   text-decoration: none;
   align-self: center;
@@ -95,23 +92,31 @@ body {
 }
 
 .section-container {
-  margin-left: 50px;
-  width: 400px;
-  height: 200px;
+  margin-top: 20px;
 }
 
 .iframe-row {
   display: flex;
-  gap: 50px;
+  gap: 100px;
 }
 
-.iframe {
+iframe {
   border: 1px solid #7a7a78;
   border-radius: 10px;
 }
 
+.top-bar {
+  width: 100%;
+  height: 50px; /* Set the height of the top bar */
+  background-color: #232323; /* Set the background color of the top bar */
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
 .nav-greetings {
   padding: 1px;
+  /* margin-top: 10px; */
   margin-bottom: 50px;
   color: #fafaf8;
   font-size: 22px;
@@ -123,7 +128,7 @@ body {
   content: '';
   display: block;
   height: 3px;
-  background-color: #f9f9ef;
+  background-color: #08102f;
   width: 100%;
   margin: 20px auto;
 }
@@ -132,23 +137,3 @@ body {
   margin-top: auto;
   align-self: center;
 }
-
-/* clusterView */
-/* .cluster-container {
-  display: flex;
-  width: 100%;
-  height: 600px;
-  border: 1px solid black;
-} */
-
-/* add cluster */
-/* .addClusterContainer {
-  display: flex;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.formContainer {
-  padding: 40px;
-  border-radius: 30px;
-  border: 1px solid #ccc; 
-} */
