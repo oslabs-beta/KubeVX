@@ -8,22 +8,6 @@ body {
   background-color: #08102f;
 }
 
-.navigation {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  background: #6ca9e5;
-  height: 550px;
-}
-
-.nav-item {
-  padding: 10px;
-  margin-bottom: 10px;
-  color: #08102f;
-  cursor: pointer;
-  text-decoration: none;
-}
-
 .formContainer {
   display: flex;
   flex-direction: column;
@@ -35,7 +19,7 @@ body {
   border-radius: 30px;
   border: 1px solid #6ca9e5;
   background-color: #fafaf8;
-  margin: 20px 500px;
+  /* margin: 20px 500px; */
 }
 
 .formContainer h1 {

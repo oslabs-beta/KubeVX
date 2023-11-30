@@ -14,7 +14,7 @@ body {
   padding: 20px;
   background: #6CA9E5;
   width: 220px; 
-  height: 610px;
+  height: 100vh;
   border-radius: 15px;
   margin: 5px;
   font-size: 16px;
@@ -212,5 +212,3 @@ body {
 .pod:hover {
   cursor: pointer; /* Change cursor to pointer on hover */
 }
-
-/* ... (other styles remain unchanged) ... */
