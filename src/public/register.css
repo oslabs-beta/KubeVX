@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #080D1D; /* Light background for the register page */
+  background-color: #08102F; /* Light background for the register page */
   font-family: Verdana, Geneva, Tahoma, sans-serif; /* Consistent font */
 }
 
@@ -17,7 +17,7 @@
 
 .register-form h2 {
   margin-bottom: 20px;
-  color: #080D1D; /* Dark color for the heading */
+  color: #08102F; /* Dark color for the heading */
 }
 
 .register-form input {

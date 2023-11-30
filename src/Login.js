@@ -23,7 +23,7 @@ const Login = () => {
         if (response.status === 200) {
           console.log('Login successful');
           setUser({ username }); // Set user in context
-          history.push('/'); // Redirect to the main dashboard
+          history.push('/'); // Redirect to add cluster
         } else {
           const data = await response.json();
           console.error('Login failed:', data.message);

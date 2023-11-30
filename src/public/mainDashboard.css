@@ -1,5 +1,11 @@
+body {
+  background-color: #08102f;
+}
+
 .mainDashboardContainer {
   display: flex;
+  align-self: center;
+  /* margin-left: 200px; */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -7,20 +13,110 @@
   display: flex;
   flex-direction: column;
   padding: 20px;
-  background: #00adb5;
+  background: rgba(108, 169, 229, 0.3);
+  width: 220px;
+  height: 93vh;
+  border-radius: 15px;
+  margin: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.nav-top-item {
+  display: flex;
+  align-self: center;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 1px;
+  margin-bottom: 50px;
+  color: #fafaf8;
+  padding-left: 70px;
+  position: relative;
+}
+
+.nav-top-item::before {
+  content: '';
+  display: block;
+  width: 60px; /* Width of the round image */
+  height: 60px; /* Height of the round image */
+  background-image: url('../public/assets/1.jpg');
+  background-size: cover; /* This will cover the entire area of the pseudo-element */
+  border-radius: 50%; /* This makes it round */
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .nav-item {
-  padding: 10px;
-  margin-bottom: 10px;
-  color: #393e46;
+  width: 100%;
+  border: 0px solid;
+  border-radius: 15px;
+  padding: 9px;
+  align-self: center;
+  margin-bottom: 30px;
+  color: #f9f9ef;
   cursor: pointer;
   text-decoration: none;
+  transition: background-color 0.3s ease;
+  /* flex-grow: 0.5;  */
+}
+
+.nav-item:hover {
+  background-color: rgba(108, 169, 229, 0.7);
 }
 
 .content {
   flex: 1;
   padding: 20px;
-  background: #393e46;
-  color: white;
+  background: #08102f;
+  color: #f9f9ef;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.section-container {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.iframe-row {
+  display: flex;
+  gap: 50px;
+}
+
+.iframe {
+  border: 1px solid #7a7a78;
+  border-radius: 10px;
+}
+
+.nav-greetings {
+  padding: 1px;
+  /* margin-top: 10px; */
+  margin-bottom: 50px;
+  color: #fafaf8;
+  font-size: 22px;
+  font-weight: bold;
+  align-self: center;
+}
+
+.nav-greetings::after {
+  content: '';
+  display: block;
+  height: 3px;
+  background-color: #f9f9ef;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.nav-bottom {
+  margin-top: auto;
+  align-self: center;
+}
+
+.dashboard-title {
+  text-align: center;
+  color: #fafaf8;
 }
