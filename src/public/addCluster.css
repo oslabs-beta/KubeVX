@@ -30,29 +30,28 @@ body {
     background-color: #08102f;
   }
   
-  .navigation {
+  /* .navigation {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    background: rgba(108, 169, 229, 0.3); /* Use rgba to set background color with opacity */
+    background: rgba(108, 169, 229, 0.3); 
     height: 550px;
   }
   
   .nav-item {
-    width: 100%; /* Each nav-item takes the entire width of the navigation bar */
-    padding: 10px;
+    width: 100%; 
     align-self: center;
     margin-bottom: 10px;
-    color: #f9f9ef; /* Set text color to off white */
+    color: #f9f9ef; 
     cursor: pointer;
     text-decoration: none;
-    transition: background-color 0.3s ease; /* Add transition for smoother color change */
-    flex-grow: 1; /* Allow each item to grow and fill the available height */
+    transition: background-color 0.3s ease; 
+    flex-grow: 1; 
   }
   
   .nav-item:hover {
-    background-color: rgba(108, 169, 229, 0.7); /* Change background color on hover */
-  }
+    background-color: rgba(108, 169, 229, 0.7); 
+  } */
   
 
 .formContainer {
