@@ -5,7 +5,7 @@ body {
 }
 
 .mainDashboardContainer {
-  height: 100vh;
+  height: 90vh;
   display: flex;
   align-self: center;
   margin-right: 100px;
@@ -19,7 +19,7 @@ body {
   /* background: rgba(108, 169, 229, 0.3); */
   background: #285582;
   width: 220px;
-  height: 100vh;
+  height: 90vh;
   border-radius: 15px;
   margin: 10px;
   font-size: 16px;
@@ -45,12 +45,45 @@ body {
   height: 60px; 
   background-image: url('../public/assets/1.jpg');
   background-size: cover;
-  border-radius: 50%; /* This makes it round */
+  border-radius: 50%; 
   position: absolute;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
 }
+
+/* .nav-top-item {
+  display: flex;
+  align-items: center; 
+  font-size: 30px;
+  font-weight: bold;
+  padding: 1px;
+  padding-right: 20px; 
+  margin-bottom: 50px;
+  color: #f9f9ef;
+  position: relative;
+  left: 30px;
+} */
+
+/* .nav-top-item::after {
+  content: '';
+  display: block;
+  width: 60px; 
+  height: 60px; 
+  background-image: url('../public/assets/1.jpg');
+  background-size: cover;
+  border-radius: 50%;
+  position: absolute;
+  right: 60px; 
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.nav-text {
+  flex-grow: 1; 
+} */
+
 
 .nav-item {
   width: 100%;
