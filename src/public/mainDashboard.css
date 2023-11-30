@@ -16,10 +16,9 @@ body {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  /* background: rgba(108, 169, 229, 0.3); */
-  background: #285582;
+  background: #6ca9e5;
   width: 220px;
-  height: 90vh;
+  height: 100vh;
   border-radius: 15px;
   margin: 10px;
   font-size: 16px;
@@ -33,7 +32,7 @@ body {
   font-weight: bold;
   padding: 1px;
   margin-bottom: 50px;
-  color: #f9f9ef;
+  color: #fafaf8;
   padding-left: 70px;
   position: relative;
 }
@@ -52,58 +51,40 @@ body {
   transform: translateY(-50%);
 }
 
-/* .nav-top-item {
-  display: flex;
-  align-items: center; 
-  font-size: 30px;
-  font-weight: bold;
-  padding: 1px;
-  padding-right: 20px; 
-  margin-bottom: 50px;
-  color: #f9f9ef;
-  position: relative;
-  left: 30px;
-} */
-
-/* .nav-top-item::after {
-  content: '';
-  display: block;
-  width: 60px; 
-  height: 60px; 
-  background-image: url('../public/assets/1.jpg');
-  background-size: cover;
-  border-radius: 50%;
-  position: absolute;
-  right: 60px; 
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-
-.nav-text {
-  flex-grow: 1; 
-} */
-
-
-.nav-item {
-  width: 100%;
+/* .nav-item {
   padding: 10px;
   margin-bottom: 10px;
   color: #f9f9ef;
   cursor: pointer;
   text-decoration: none;
   align-self: center;
-  border-radius:15px;
+} */
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: rgba(108, 169, 229, 0.3);
+  height: 92vh;
+  width: 220px;
+}
+
+.nav-item {
+  width: 100%;
+  border: 0px solid;
+  border-radius: 15px;
+  padding: 9px;
+  align-self: center;
+  margin-bottom: 30px;
+  color: #f9f9ef;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  /* flex-grow: 0.5;  */
 }
 
 .nav-item:hover {
-  background-color: rgba(108, 169, 229, 0.7); 
-}
-
-.dashboard-title {
-  text-align: center;
-  margin-left: 110px;
-  color: #f9f9ef;
+  background-color: rgba(108, 169, 229, 0.7);
 }
 
 .content {
@@ -132,7 +113,7 @@ body {
 .nav-greetings {
   padding: 1px;
   margin-bottom: 50px;
-  color: #f9f9ef;
+  color: #fafaf8;
   font-size: 22px;
   font-weight: bold;
   align-self: center;
@@ -151,3 +132,23 @@ body {
   margin-top: auto;
   align-self: center;
 }
+
+/* clusterView */
+/* .cluster-container {
+  display: flex;
+  width: 100%;
+  height: 600px;
+  border: 1px solid black;
+} */
+
+/* add cluster */
+/* .addClusterContainer {
+  display: flex;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.formContainer {
+  padding: 40px;
+  border-radius: 30px;
+  border: 1px solid #ccc; 
+} */
