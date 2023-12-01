@@ -4,8 +4,9 @@ import Graph from 'react-graph-vis';
 import Navigation from './components/Navigation.jsx';
 import ClusterChat from './ClusterChat.js';
 import '../src/public/clusterView.css';
+// import '../src/public/images/key.jpg';
 // import '../src/public/clusterChat.css'
-// import 'vis-network/styles/vis-network.css';
+import 'vis-network/styles/vis-network.css';
 
 const KubernetesFlow = () => {
   const [graphData, setGraphData] = useState({ nodes: [], edges: [] });
