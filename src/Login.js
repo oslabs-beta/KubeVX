@@ -23,7 +23,7 @@ const Login = () => {
         if (response.status === 200) {
           console.log('Login successful');
           setUser({ username }); // Set user in context
-          history.push('/'); // Redirect to add cluster
+          history.push('/addcluster'); // Redirect to add cluster
         } else {
           const data = await response.json();
           console.error('Login failed:', data.message);
@@ -61,7 +61,7 @@ const Login = () => {
           Create a new account
         </button>
         <div className="back-to-dashboard">
-          <Link to="/">Back to Main Dashboard</Link>
+          <Link to="/addcluster">Back to Main Dashboard</Link>
         </div>
       </form>
     </div>
