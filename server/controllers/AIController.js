@@ -30,7 +30,7 @@ AIController.sendMessage = async (req, res, next) => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer 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`, // add process api key stuff
+        Authorization: `Bearer ${apiKey}`, // add process api key stuff
       },
       body: JSON.stringify({
         model: 'gpt-3.5-turbo',
