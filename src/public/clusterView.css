@@ -1,32 +1,127 @@
-.clusterview-container {
+.cluster-container {
   display: flex;
-  width: 100%;
-  height: 100%;
-  border: 1px solid black;
+  width: 100vw;
+  height: 96vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  /* height: 92vh;
-  width: 70vw;
-  margin-top: 10px; */
-  /* background-color: #fafaf8; */
+  gap: 20px;
 }
 
-.clusterDisplay {
+/* .clusterDisplay {
   background-color: #fafaf8;
   height: 96vh;
   width: 55vw;
   margin-top: 10px;
   border: 1px;
   border-radius: 20px;
-  margin-left: 10px;
-}
+  margin-left: 20px;
+  background-image: url('../public/assets/key.jpg');
+} */
 
-.chatBox {
+.clusterDisplay {
+    background-color: #fafaf8;
+    height: 96vh;
+    width: 55vw;
+    margin-top: 10px;
+    border: 1px;
+    border-radius: 20px;
+    margin-left: 20px;
+    background: url('../public/assets/key.png') no-repeat top left / 200px 300px, #fafaf8; 
+  }
+  
+
+.chat-container {
   background-color: #fafaf8;
-  height: 96vh;
-  width: 35vw;
+  height: 92vh;
+  width: 20vw;
   margin-top: 10px;
   border: 1px;
   border-radius: 20px;
   margin-left: 15px;
   margin-right: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  max-height: 100%;
+}
+
+.message {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 20px;
+  max-width: 60%;
+}
+
+.ai {
+  background-color: #e0e0e0;
+  align-self: flex-start;
+}
+
+.user {
+  background-color: #4c9aff;
+  color: white;
+  align-self: flex-end;
+}
+
+.input-form {
+  display: flex;
+  margin-top: auto;
+  height: 25px;
+}
+
+.input-form input {
+  flex-grow: 1;
+  margin-right: 5px;
+  border: 1px solid;
+  border-radius: 10px;
+  padding-left: 10px;
+  width: 300px;
+}
+
+.input-form button {
+  flex-shrink: 0;
+  border: 1px solid #4c9aff;
+  border-radius: 10px;
+  background-color: #4c9aff;
+  color: white;
+  font-size: 13px;
+}
+
+.AiTittle {
+  display: flex;
+  text-align: center;
+  margin-left: 20px;
+  color: #232323;
+  background: rgba(250, 250, 248, 4);
+}
+
+
+
+
+
+/* 
+.cluster-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+    background-color: #FAFAF8;
+}
+  
+.navigation {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: #00adb5;
+} */

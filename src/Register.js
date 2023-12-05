@@ -22,7 +22,7 @@ const Register = () => {
 
       if (response.status === 201) {
         console.log('Registration successful');
-        history.push('/login'); // Navigate to the login route after successful registration
+        history.push('/'); // Navigate to the login route after successful registration
       } else {
         const data = await response.json();
         console.error('Registration failed:', await response.json());

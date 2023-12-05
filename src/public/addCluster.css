@@ -8,6 +8,12 @@ body {
   background-color: #08102f;
 }
 
+.addClusterContainer {
+  display: flex;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #08102f;
+}
+
 .formContainer {
   display: flex;
   flex-direction: column;
@@ -19,7 +25,7 @@ body {
   border-radius: 30px;
   border: 1px solid #6ca9e5;
   background-color: #fafaf8;
-  /* margin: 20px 500px; */
+  margin: 200px 500px;
 }
 
 .formContainer h1 {
@@ -41,7 +47,7 @@ body {
 }
 
 .formContainer button {
-  width: 100%;
+  width: 108%;
   padding: 10px;
   border: none;
   border-radius: 15px;
@@ -49,7 +55,7 @@ body {
   color: #fff;
   font-size: 16px;
   cursor: pointer;
-  margin: 10px;
+  margin-top: 15px;
 }
 
 .formContainer button:hover {

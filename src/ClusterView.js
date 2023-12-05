@@ -2,12 +2,16 @@ import React, { useState, useEffect } from 'react';
 // import ReactFlow, { Background } from 'react-flow-renderer';
 import Graph from 'react-graph-vis';
 import Navigation from './components/Navigation.jsx';
+import ClusterChat from './ClusterChat.js';
 import '../src/public/clusterView.css';
+// import '../src/public/images/key.jpg';
+// import '../src/public/clusterChat.css'
 import 'vis-network/styles/vis-network.css';
 
 const KubernetesFlow = () => {
   const [graphData, setGraphData] = useState({ nodes: [], edges: [] });
   const [loading, setLoading] = useState(true);
+  const [clusterData, setclusterData] = useState({});
 
   useEffect(() => {
     fetch('http://localhost:3001/clusterview')
@@ -16,6 +20,7 @@ const KubernetesFlow = () => {
         //Process the data
         // console.log('Data:', data)
         const { nodes, edges } = processClusterData(data);
+        setclusterData(data);
         //console log!
         //console.log();
 
@@ -142,12 +147,12 @@ const KubernetesFlow = () => {
   }
   // console.log('elements:', elements)
   return (
-    <div className="clusterview-container">
+    <div className="cluster-container">
       <Navigation className="navigation" />
       <div className="clusterDisplay">
         <Graph graph={graphData} options={graphOptions} events={events} />
       </div>
-      <div className="chatBox"></div>
+      <ClusterChat clusterData={clusterData} />
     </div>
   );
 };
