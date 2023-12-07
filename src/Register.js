@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory, Link } from 'react-router-dom';
-import '../src/public//register.css'; 
+import '../src/public//register.css';
 
 const Register = () => {
   const [fullName, setFullName] = useState('');
@@ -37,27 +37,29 @@ const Register = () => {
     <div className="register-container">
       <form className="register-form" onSubmit={handleRegister}>
         <h2>Register</h2>
-        <input 
-          type="text" 
-          placeholder="Full Name" 
-          value={fullName} 
-          onChange={(e) => setFullName(e.target.value)} 
+        <input
+          type="text"
+          placeholder="Full Name"
+          value={fullName}
+          onChange={(e) => setFullName(e.target.value)}
         />
-        <input 
-          type="text" 
-          placeholder="Username" 
-          value={username} 
-          onChange={(e) => setUsername(e.target.value)} 
+        <input
+          type="text"
+          placeholder="Username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
         />
-        <input 
-          type="password" 
-          placeholder="Password" 
-          value={password} 
-          onChange={(e) => setPassword(e.target.value)} 
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit" className="action-button">Register</button>
+        <button type="submit" className="action-button">
+          Register
+        </button>
         <div className="back-to-login">
-          <Link to="/login">Back to login</Link>
+          <Link to="/">Back to login</Link>
         </div>
       </form>
     </div>
