@@ -9,11 +9,14 @@ const Navigation = () => {
     <div className="navigation">
       <h2 className="nav-top-item">Kube VX</h2>
       {user && <div className="nav-greetings">Hi {user.username}!</div>}
-      <Link to="/" className="nav-item">
+      <Link to="/addcluster" className="nav-item">
         Add Cluster
       </Link>
       <Link to="/maindashboard" className="nav-item">
         Dashboard
+      </Link>
+      <Link to="/custom" className="nav-item">
+        Custom Metrics
       </Link>
       <Link to="/clusterview" className="nav-item">
         Cluster View
