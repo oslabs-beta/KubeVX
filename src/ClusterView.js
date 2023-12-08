@@ -6,6 +6,11 @@ import ClusterChat from './ClusterChat.js';
 import '../src/public/clusterView.css';
 import 'vis-network/styles/vis-network.css';
 
+import nodeImage from './public/assets/node-128.png';
+import podImage from './public/assets/pod-128.png';
+import serviceImage from './public/assets/svc-128.png';
+import deploymentImage from './public/assets/deploy-128.png';
+
 const KubernetesFlow = () => {
   const [graphData, setGraphData] = useState({ nodes: [], edges: [] });
   const [loading, setLoading] = useState(true);
@@ -19,8 +24,6 @@ const KubernetesFlow = () => {
         // console.log('Data:', data)
         const { nodes, edges } = processClusterData(data);
         setclusterData(data);
-        //console log!
-        //console.log();
 
         setGraphData({ nodes, edges });
         setLoading(false);
@@ -41,9 +44,11 @@ const KubernetesFlow = () => {
         id: `node-${index}`,
         title: `Node: ${node}`, // label would be the same thing
         // color: '#64C2A6', // idk what color this is
-        color: 'MidnightBlue',
-        shape: 'box',
-        size: 200,
+        // color: 'MidnightBlue',
+        // shape: 'box',
+        shape: 'image',
+        image: nodeImage,
+        size: 40,
       });
     });
 
@@ -53,8 +58,10 @@ const KubernetesFlow = () => {
         id: `pod-${index}`,
         title: `Pod: ${pod.name}`,
         // color: '#FFD86E',
-        color: 'RoyalBlue',
-        shape: 'circle',
+        // color: 'RoyalBlue',
+        // shape: 'circle',
+        shape: 'image',
+        image: podImage
       });
 
       // Create edges from Node to Pod
@@ -75,8 +82,10 @@ const KubernetesFlow = () => {
         id: `service-${index}`,
         title: `Service: ${service}`,
         // color: '#6DAFFF',
-        color: 'SeaGreen',
-        shape: 'diamond',
+        // color: 'SeaGreen',
+        // shape: 'diamond',
+        shape: 'image',
+        image: serviceImage
       });
 
       // Create edges from Service to Pod
@@ -101,8 +110,10 @@ const KubernetesFlow = () => {
         id: `deployment-${index}`,
         title: `Deployment: ${deployment}`,
         // color: '#FFA07A',
-        color: 'SpringGreen',
-        shape: 'star',
+        // color: 'SpringGreen',
+        // shape: 'star',
+        shape: 'image',
+        image: deploymentImage
       });
 
       // Create edges from Deployment to Pod (based on naming convention or //label matching)
@@ -122,7 +133,7 @@ const KubernetesFlow = () => {
 
   const graphOptions = {
     layout: {
-      hierarchical: false,
+      hierarchical: false, // try switching to true
     },
     edges: {
       color: '#000000',
