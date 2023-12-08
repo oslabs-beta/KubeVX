@@ -24,8 +24,6 @@ const KubernetesFlow = () => {
         // console.log('Data:', data)
         const { nodes, edges } = processClusterData(data);
         setclusterData(data);
-        //console log!
-        //console.log();
 
         setGraphData({ nodes, edges });
         setLoading(false);
