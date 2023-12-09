@@ -21,11 +21,11 @@ const Navigation = () => {
       <Link to="/clusterview" className="nav-item">
         Cluster View
       </Link>
-      {/* <Link to="/alerts" className="nav-item">
-        Alerts
-      </Link> */}
       <Link to="/logs" className="nav-item">
         Logs
+      </Link>
+      <Link to="/alerts" className="nav-item">
+        Alerts
       </Link>
       <Link to="/learnk8s" className="nav-item">
         Learn Kubernetes

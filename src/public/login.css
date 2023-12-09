@@ -34,13 +34,13 @@
   margin-bottom: 10px;
   border: none;
   border-radius: 15px;
-  background-color: #6ca9e5; /* Primary button color */
+  background-color: #3080cc; /* Darker on hover */
   color: white;
   cursor: pointer;
 }
 
 .login-form button:hover {
-  background-color: #3080cc; /* Darker on hover */
+  background-color: #5b9ee1; /* Primary button color */
 }
 
 .back-to-dashboard {
@@ -49,7 +49,7 @@
 }
 
 .back-to-dashboard a {
-  color: #6CA9E5; /* Same as button color for consistency */
+  color: #3080cc; /* Same as button color for consistency */
   text-decoration: none;
 }
 

@@ -1,0 +1,13 @@
+.alertsContainer {
+  display: flex;
+  width: 100vw;
+  height: 96vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  gap: 10px;
+}
+
+.alertsTableContainer {
+  padding: 20px;
+  height: 96vh;
+  width: 82.5vw;
+}
