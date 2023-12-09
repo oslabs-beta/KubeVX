@@ -11,6 +11,8 @@ import Register from './Register.js';
 import Logout from './Logout.js';
 import AddCluster from './AddCluster.js';
 import CustomMetricsContainer from './CustomMetricsContainer.js';
+import Logs from './Logs.js';
+// import Alerts from './Alerts.js';
 
 const App = () => {
   return (
@@ -28,6 +30,8 @@ const App = () => {
               <Route exact path="/learnk8s" component={LearnK8s} />
               <Route exact path="/clusterview" component={ClusterView} />
               <Route exact path="/custom" component={CustomMetricsContainer} />
+              <Route exact path="/logs" component={Logs} />
+              {/* <Route exact path="/alerts" component={Alerts} /> */}
             </Switch>
           </div>
         </Router>
