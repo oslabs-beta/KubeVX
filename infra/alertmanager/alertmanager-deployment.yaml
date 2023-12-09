@@ -1,0 +1,177 @@
+# apiVersion: v1
+# kind: ConfigMap
+# metadata:
+#   name: alertmanager-config
+# data:
+#   alertmanager.yml: |-
+#     route:
+#       group_by: [alertname]
+#       receiver: 'mail' # default receiver
+#       repeat_interval: 24h
+#       routes:
+#         - receiver: 'teams'
+#           repeat_interval: 12h
+#           matchers:
+#             - severity="medium"
+
+#         - receiver: 'teams'
+#           repeat_interval: 4h
+#           matchers:
+#             - severity="high"
+
+#     receivers:
+#       - name: 'mail'
+#         email_configs:
+#           - smarthost: 'yourmailhost.com:465'
+#             auth_username: 'yourmail@yourmailhost.com'
+#             auth_password: 'your mail password'
+#             from: 'yourmail@yourmailhost.com'
+#             to: 'someonesmail@yourmailhost.com'
+#             require_tls: false
+
+#       - name: 'teams'
+#         webhook_configs:
+#           - url: 'http://prom2teams:8089'
+#             send_resolved: true
+
+# ---
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: alertmanager
+# spec:
+#   selector:
+#     app: alertmanager
+#   ports:
+#     - name: web
+#       port: 9093
+#       targetPort: web
+
+# ---
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: alertmanager
+# spec:
+#   replicas: 1
+#   selector:
+#     matchLabels:
+#       app: alertmanager
+#   template:
+#     metadata:
+#       labels:
+#         app: alertmanager
+#     spec:
+#       containers:
+#         - name: alertmanager
+#           image: prom/alertmanager:v0.22.2  # Use the version you need
+#           args:
+#             - "--config.file=/etc/config/alertmanager.yml"
+#             - "--storage.path=/data"
+#           volumeMounts:
+#             - name: config-volume
+#               mountPath: /etc/config
+#             - name: storage-volume
+#               mountPath: /data
+#       volumes:
+#         - name: config-volume
+#           configMap:
+#             name: alertmanager-config
+#         - name: storage-volume
+#           emptyDir: {}
+
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: alertmanager-config
+data:
+  alertmanager.yml: |-
+    route:
+  group_by: [alertname]
+  receiver: 'mail' # default receiver
+  repeat_interval: 24h
+  routes:
+  - receiver: 'teams'
+    repeat_interval: 12h
+    matchers:
+      - severity="medium"
+  - receiver: 'teams'
+    repeat_interval: 4h
+    matchers:
+      - severity="high"
+  - receiver: 'email'  # Add receiver for DemoAlerts
+    group_wait: 30s
+    group_interval: 5m
+    repeat_interval: 2h
+    match_re:
+      alertname: InstanceDown
+receivers:
+- name: 'mail'
+  email_configs:
+    - smarthost: 'yourmailhost.com:465'
+      auth_username: 'yourmail@yourmailhost.com'
+      auth_password: 'your mail password'
+      from: 'yourmail@yourmailhost.com'
+      to: 'someonesmail@yourmailhost.com'
+      require_tls: false
+- name: 'teams'
+  webhook_configs:
+    - url: 'http://prom2teams:8089'
+      send_resolved: true
+- name: 'email'  # Add configuration for Email receiver
+  email_configs:
+    - to: 'your-email@example.com'
+      from: 'alertmanager@example.com'
+      smarthost: 'email-server.com:587'
+      auth_username: 'username'
+      auth_identity: 'alertmanager@example.com'
+      auth_password: 'your-password'
+
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: alertmanager
+spec:
+  selector:
+    app: alertmanager
+  ports:
+    - name: web
+      port: 9093
+      targetPort: web
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: alertmanager
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: alertmanager
+  template:
+    metadata:
+      labels:
+        app: alertmanager
+    spec:
+      containers:
+        - name: alertmanager
+          image: prom/alertmanager:v0.22.2  # Use the version you need
+          args:
+            - "--config.file=/etc/config/alertmanager.yml"
+            - "--storage.path=/data"
+          volumeMounts:
+            - name: config-volume
+              mountPath: /etc/config
+            - name: storage-volume
+              mountPath: /data
+      volumes:
+        - name: config-volume
+          configMap:
+            name: alertmanager-config
+        - name: storage-volume
+          emptyDir: {}
+

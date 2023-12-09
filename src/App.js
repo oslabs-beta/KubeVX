@@ -12,13 +12,12 @@ import Logout from './Logout.js';
 import AddCluster from './AddCluster.js';
 import CustomMetricsContainer from './CustomMetricsContainer.js';
 import Logs from './Logs.js';
-// import Alerts from './Alerts.js';
+import Alerts from './Alerts.js';
 
 const App = () => {
   return (
     <UserProvider>
       <Provider store={store}>
-        {/* Wrap your entire application with the Provider */}
         <Router>
           <div>
             <Switch>
@@ -27,11 +26,11 @@ const App = () => {
               <Route exact path="/logout" component={Logout} />
               <Route exact path="/addcluster" component={AddCluster} />
               <Route exact path="/maindashboard" component={MainDashboard} />
-              <Route exact path="/learnk8s" component={LearnK8s} />
-              <Route exact path="/clusterview" component={ClusterView} />
               <Route exact path="/custom" component={CustomMetricsContainer} />
+              <Route exact path="/clusterview" component={ClusterView} />
               <Route exact path="/logs" component={Logs} />
-              {/* <Route exact path="/alerts" component={Alerts} /> */}
+              <Route exact path="/alerts" component={Alerts} />
+              <Route exact path="/learnk8s" component={LearnK8s} />
             </Switch>
           </div>
         </Router>
