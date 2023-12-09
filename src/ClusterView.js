@@ -159,6 +159,7 @@ const KubernetesFlow = () => {
     <div className="cluster-container">
       <Navigation className="navigation" />
       <div className="clusterDisplay">
+        <h1 className="ClusterTitl">Cluster View</h1>
         <Graph graph={graphData} options={graphOptions} events={events} />
       </div>
       <ClusterChat clusterData={clusterData} />
