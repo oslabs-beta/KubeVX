@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { UserProvider } from './UserContext.js';
-import { Provider } from 'react-redux'; // Import Provider from react-redux
-import store from './store.js'; // Import your Redux store
+import { Provider } from 'react-redux'; 
+import store from './store.js'; 
 import MainDashboard from './MainDashboard.js';
 import LearnK8s from './LearnK8s.js';
 import ClusterView from './ClusterView.js';

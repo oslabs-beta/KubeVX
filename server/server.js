@@ -54,6 +54,22 @@ app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
+// CATCH-ALL ROUTE HANDLER
+app.use('*', (req, res) => res.sendStatus(404));
+
+// GLOBAL ERROR HANDLER
+app.use((err, req, res, next) => {
+  const defaultErr = {
+    log: 'Express error handler caught unknown middleware error',
+    status: 500,
+    message: { err: 'An error occurred' },
+  };
+  const errorObj = Object.assign(defaultErr, err);
+  console.log(errorObj.log);
+
+  return res.status(errorObj.status).send(errorObj.message);
+});
+
 app.listen(port, () => {
   console.log(`Backend server listening at http://localhost:${port}`);
 });
