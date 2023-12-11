@@ -8,7 +8,13 @@ const Navigation = () => {
   return (
     <div className="navigation">
       <h2 className="nav-top-item">Kube VX</h2>
-      {user && <div className="nav-greetings">Hi {user.username}!</div>}
+      {/* {user && <div className="nav-greetings">Hi {user.username}!</div>} */}
+      {user && user.username ? (
+        <div className="nav-greetings">Hi {user.username}!</div>
+      ) : (
+        <div className="nav-greetings">Hello!</div>
+      )}
+
       <Link to="/addcluster" className="nav-item">
         Add Cluster
       </Link>
