@@ -35,7 +35,7 @@ GRAFANA
 Username: admin
 Password: admin
 5. Prometheus has to be running on localhost:9090
-6. Create dashboard-> search import dashboard -> input 1860 -> chose Prometheus -> import
+6. Search import dashboard -> input 1860 -> chose Prometheus -> import
     a. repeat step 6 for 7249 and 8588
 
 SET ALLOW EMBEDDING
@@ -50,7 +50,7 @@ SET ALLOW EMBEDDING
 
 Run “minikube start” to initialize minikube. It may take a while if this is a first time setup.
 
-Now you need to apply the yaml files:
+Now you need to apply the yaml files at the root directory of kubeVX:
 
 1. run “kubectl apply -f webapp-deployment.yaml” in your terminal
 
@@ -58,12 +58,17 @@ Now you need to apply the yaml files:
 
 3. Run this command in your terminal “minikube service webapp-service”
 
+Lastly, run these commands:
 
-How to Use KubeVX
+1. npm install
 
+2. npm run build
+
+3. npm run dev
 
 Once you complete setting up, you can navigate to localhost:7070 in your browser to see the result.
 
+How to Use KubeVX
 
 1. You will first see a login page. Go ahead and create an account.
 2. Next, input data on your clusters so KubeVX can access it  
