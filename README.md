@@ -44,7 +44,7 @@ How to use KubeVX
 
 1. You will first see a login page. Go ahead and create an account.
 2. Next, input data on your clusters so KubeVX can access it  <br>
-![add cluster](https://raw.githubusercontent.com/oslabs-beta/KubeVX/blob/main/loginAndAdd.gif?raw=true)
+![add cluster](https://github.com/oslabs-beta/KubeVX/blob/main/src/public/assets/loginAndAdd.gif)
 3. You should be able to see metrics graphs under Dashboard  <br>
 ![dashboard](https://raw.githubusercontent.com/oslabs-beta/KubeVX/blob/main/dashboard.gif?raw=true)
 4. Cluster View features an AI chatbot powered by the OpenAI API. You will have to purchase an Open AI API key to use this feature. After purchasing, input your API key in this format "OPENAI_API_KEY={insert api Key}" in a .env file in your root folder. The logic to access this key is already built out at the top of AIController.js . The chatbot is programmed to only answer K8s related questions.  <br>
