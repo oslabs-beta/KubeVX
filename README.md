@@ -30,7 +30,6 @@
 <p align="center" style="font-size: 1em">
 <a name="website" href="https://www.kubevx.com">Website</a>
 <a name="medium" href="https://medium.com/@kubevx">Medium</a>
-<!-- <a name="product-hunt" href="">Product Hunt</a> -->
 <a name="linkedin" href="https://www.linkedin.com/company/kubevx">LinkedIn</a>
 </p>
 <br /><br />
@@ -48,7 +47,7 @@ How to use KubeVX
 ![add cluster](https://github.com/oslabs-beta/KubeVX/blob/main/loginAndAdd.gif?raw=true)
 3. You should be able to see metrics graphs under Dashboard  <br>
 ![dashboard](https://github.com/oslabs-beta/KubeVX/blob/main/dashboard.gif?raw=true)
-4. Cluster View has an AI chatbot. Please wait for the AI to give you an overview before talking to it. It will only answer K8s related questions.  <br>
+4. Cluster View features an AI chatbot powered by the OpenAI API. You will have to purchase an Open AI API key to use this feature. After purchasing, input your API key in this format "OPENAI_API_KEY={insert api Key}" in a .env file in your root folder. The logic to access this key is already built out at the top of AIController.js . The chatbot is programmed to only answer K8s related questions.  <br>
 ![clusterview AI](https://github.com/oslabs-beta/KubeVX/blob/main/clusterAndAI?raw=true)
 5. This is the learn kubernetes page. Click around and see definitions of each term. <br>
 ![learn k8s](https://github.com/oslabs-beta/KubeVX/blob/main/learnkubernetes.gif?raw=true)  

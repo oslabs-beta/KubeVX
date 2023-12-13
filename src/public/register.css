@@ -3,8 +3,8 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #08102F; /* Light background for the register page */
-  font-family: Verdana, Geneva, Tahoma, sans-serif; /* Consistent font */
+  background-color: #08102F; 
+  font-family: Verdana, Geneva, Tahoma, sans-serif; 
 }
 
 .register-form {
@@ -17,7 +17,7 @@
 
 .register-form h2 {
   margin-bottom: 20px;
-  color: #08102F; /* Dark color for the heading */
+  color: #08102F; 
 }
 
 .register-form input {
@@ -34,13 +34,13 @@
   margin-bottom: 10px;
   border: none;
   border-radius: 15px;
-  background-color: #6CA9E5; /* Primary button color */
+  background-color: #6CA9E5; 
   color: white;
   cursor: pointer;
 }
 
 .register-form button:hover {
-  background-color: #3080CC; /* Darker on hover */
+  background-color: #3080CC; 
 }
 
 .back-to-login {

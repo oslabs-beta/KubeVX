@@ -15,17 +15,6 @@
   }
 }
 
-/* .clusterDisplay {
-  background-color: #fafaf8;
-  height: 96vh;
-  width: 55vw;
-  margin-top: 10px;
-  border: 1px;
-  border-radius: 20px;
-  margin-left: 20px;
-  background-image: url('../public/assets/key.jpg');
-} */
-
 .clusterDisplay {
     display: flex;
     flex-direction: column;
@@ -36,10 +25,8 @@
     border: 1px;
     border-radius: 20px;
     margin-left: 20px;
-    background: url('../public/assets/key.png') no-repeat top left / 200px 300px, #fafaf8; 
   }
   
-
 .chat-container {
   background-color: #fafaf8;
   height: 92vh;
@@ -114,27 +101,3 @@
   color: #08102F;
   background: rgba(250, 250, 248, 4);
 }
-
-
-
-
-
-/* 
-.cluster-container {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    border: 1px solid black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.container {
-    background-color: #FAFAF8;
-}
-  
-.navigation {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    background: #00adb5;
-} */

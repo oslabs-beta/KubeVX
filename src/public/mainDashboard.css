@@ -5,7 +5,6 @@ body {
 .mainDashboardContainer {
   display: flex;
   align-self: center;
-  /* margin-left: 200px; */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -37,11 +36,11 @@ body {
 .nav-top-item::before {
   content: '';
   display: block;
-  width: 60px; /* Width of the round image */
-  height: 60px; /* Height of the round image */
+  width: 60px; 
+  height: 60px; 
   background-image: url('../public/assets/1.jpg');
-  background-size: cover; /* This will cover the entire area of the pseudo-element */
-  border-radius: 50%; /* This makes it round */
+  background-size: cover; 
+  border-radius: 50%; 
   position: absolute;
   left: 0;
   top: 50%;
@@ -59,7 +58,6 @@ body {
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s ease;
-  /* flex-grow: 0.5;  */
 }
 
 .nav-item:hover {
@@ -95,7 +93,6 @@ body {
 
 .nav-greetings {
   padding: 1px;
-  /* margin-top: 10px; */
   margin-bottom: 50px;
   color: #fafaf8;
   font-size: 22px;
