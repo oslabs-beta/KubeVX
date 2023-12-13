@@ -44,19 +44,19 @@ How to use KubeVX
 
 1. You will first see a login page. Go ahead and create an account.
 2. Next, input data on your clusters so KubeVX can access it  <br>
-![add cluster](https://github.com/oslabs-beta/KubeVX/blob/main/loginAndAdd.gif?raw=true)
+![add cluster](https://raw.githubusercontent.com/oslabs-beta/KubeVX/blob/main/loginAndAdd.gif?raw=true)
 3. You should be able to see metrics graphs under Dashboard  <br>
-![dashboard](https://github.com/oslabs-beta/KubeVX/blob/main/dashboard.gif?raw=true)
+![dashboard](https://raw.githubusercontent.com/oslabs-beta/KubeVX/blob/main/dashboard.gif?raw=true)
 4. Cluster View features an AI chatbot powered by the OpenAI API. You will have to purchase an Open AI API key to use this feature. After purchasing, input your API key in this format "OPENAI_API_KEY={insert api Key}" in a .env file in your root folder. The logic to access this key is already built out at the top of AIController.js . The chatbot is programmed to only answer K8s related questions.  <br>
-![clusterview AI](https://github.com/oslabs-beta/KubeVX/blob/main/clusterAndAI?raw=true)
+![clusterview AI](https://raw.githubusercontent.com/oslabs-beta/KubeVX/blob/main/clusterAndAI?raw=true)
 5. This is the learn kubernetes page. Click around and see definitions of each term. <br>
-![learn k8s](https://github.com/oslabs-beta/KubeVX/blob/main/learnkubernetes.gif?raw=true)  
+![learn k8s](https://raw.githubusercontent.com/oslabs-beta/KubeVX/blob/main/learnkubernetes.gif?raw=true)  
 6. You can use the custom metrics if you want to access specific information about your cluster that’s not displayed on the dashboard  <br>
-![custom metrics](https://github.com/oslabs-beta/KubeVX/blob/main/customMetrics.gif?raw=true)
+![custom metrics](https://raw.githubusercontent.com/oslabs-beta/KubeVX/blob/main/customMetrics.gif?raw=true)
 7. The logs provide information of your cluster’s status while running <br>
-![logs](https://github.com/oslabs-beta/KubeVX/blob/main/logs.gif?raw=true)
+![logs](https://raw.githubusercontent.com/oslabs-beta/KubeVX/blob/main/logs.gif?raw=true)
 8. Alert page displays anomalies in your clusters so you can clearly see what needs fixing <br>
-![alert](https://github.com/oslabs-beta/KubeVX/blob/main/alerts.gif?raw=true)
+![alert](https://raw.githubusercontent.com/oslabs-beta/KubeVX/blob/main/alerts.gif?raw=true)
 
 How to Setup Dependencies <br>
 Make sure you have the requirements installed:
@@ -71,7 +71,7 @@ Prometheus
 Keep Docker running in the background.
 
 First, clone our repo <br>
-![cloning](https://github.com/oslabs-beta/KubeVX/blob/main/cloningKubeVX.gif?raw=true)
+![cloning](https://raw.githubusercontent.com/oslabs-beta/KubeVX/blob/main/cloningKubeVX.gif?raw=true)
 
 PROMETHEUS <br>
 If you haven’t installed Helm, use homebrew “brew install helm” <br>
