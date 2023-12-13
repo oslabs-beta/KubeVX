@@ -187,8 +187,8 @@ const Login = () => {
                 console.log(details);
                 console.log(credentialResponse);
                 console.log('Login successful');
-                console.log(details.name);
-                setUser(details.name); // Set user in context
+                // console.log(details.name);
+                // setUser(details.name); // Set user in context
                 history.push('/addcluster');
               }}
               onError={() => {

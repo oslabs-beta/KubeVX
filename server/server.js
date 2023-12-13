@@ -36,6 +36,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/', router);
 
 app.use(express.static(path.join(__dirname, '../src/public')));
+app.use(express.static(path.join(__dirname, '../dist/')));
 
 // Enable collection of default metrics
 prometheus.collectDefaultMetrics();
