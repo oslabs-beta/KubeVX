@@ -40,7 +40,7 @@
 
 Welcome to KubeVX, an open-source solution crafted to enhance Kubernetes development with intuitive and efficient data presentation. Equipped with a user-friendly interface and powerful features, KubeVX simplifies Kubernetes complexities, allowing developers to focus sharply on optimizing application performance.
 
-How to use KubeVX
+## How to use KubeVX
 
 1. You will first see a login page. Go ahead and create an account.
 2. Next, input data on your clusters so KubeVX can access it  <br>
@@ -58,7 +58,8 @@ How to use KubeVX
 8. Alert page displays anomalies in your clusters so you can clearly see what needs fixing <br>
 ![alert](https://github.com/oslabs-beta/KubeVX/blob/main/src/public/assets/alerts.gif)
 
-How to Setup Dependencies <br>
+## Setup
+
 Make sure you have the requirements installed:
 MacOS
 Homebrew
@@ -92,32 +93,70 @@ Password: admin
     a. repeat step 6 for 7249 and 8588
 
 SET ALLOW EMBEDDING
-1. Run this command in your terminal “sudo pico /opt/homebrew/etc/grafana/grafana.ini” <br>
-   a. intel chip mac: sudo pico /usr/homebrew/etc/grafana/grafana.ini
+1. Run this command in your terminal
+```bash
+sudo pico /opt/homebrew/etc/grafana/grafana.ini
+```
+If you have a Mac with the Intel chip, use this command instead
+```bash
+sudo pico /usr/homebrew/etc/grafana/grafana.ini
+```
 2. Scroll through the terminal with arrow keys to find the security section
 3. Set “allow_embedding = true” and make sure it is not commented out with a # 
 4. Control + O to write out, press return/enter key to confirm and control + X to exit 
-5. Run “brew services restart grafana” for changes to take effect.
+5. Run this command for changes to take effect.
+```bash
+brew services restart grafana
+```
 6. Go to http://localhost:3000/admin/settings on your browser to confirm
-
 
 Run “minikube start” to initialize minikube. It may take a while if this is a first time setup.
 
 Now you need to apply the yaml files at the root directory of kubeVX:
 
-1. run “kubectl apply -f webapp-deployment.yaml” in your terminal
+Run the following commands in your terminal
 
-2. Run this command in your terminal “kubectl apply -f webapp-service.yaml”
+```bash
+kubectl apply -f webapp-deployment.yaml
+```
 
-3. Run this command in your terminal “minikube service webapp-service”
+```bash
+kubectl apply -f webapp-service.yaml
+```
+
+```bash
+minikube service webapp-service
+```
 
 Lastly, run these commands:
 
-1. npm install
+```bash
+npm install
+```
 
-2. npm run build
+```bash
+npm run build
+```
 
-3. npm run dev
+```bash
+npm run dev
+```
 
 Once you complete setting up, you can navigate to localhost:7070 in your browser to see the result.
 
+## Contributing
+
+Any contributions are always welcomed and appreciated!
+
+- Fork the project.
+- Create your feature branch.
+- Create a pull request detailing the changes you would like to introduce.
+- Create a new issue on GitHub.
+
+## Our Team
+
+- Jerry Trinh [GitHub](https://github.com/jtrrain) | [LinkedIn](https://www.linkedin.com/in/jtjerrytrinh/)
+- Jordan Palmer [GitHub](https://github.com/jordansjpalmer) | [LinkedIn](https://www.linkedin.com/in/jordansjpalmer/)
+- Mai Dinh [GitHub](https://github.com/mai033) | [LinkedIn](https://www.linkedin.com/in/mai-dahlia)
+- Patrick Wang [GitHub](https://github.com/pwang040) | [LinkedIn](https://www.linkedin.com/in/pwang040/)
+- Pegah Chendari [GitHub](https://github.com/PegahCh) | [LinkedIn](https://www.linkedin.com/in/pegah-chendari/)
