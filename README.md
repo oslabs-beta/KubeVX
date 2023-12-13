@@ -41,7 +41,7 @@
 
 Welcome to KubeVX, an open-source solution crafted to enhance Kubernetes development with intuitive and efficient data presentation. Equipped with a user-friendly interface and powerful features, KubeVX simplifies Kubernetes complexities, allowing developers to focus sharply on optimizing application performance.
 
-How to Use KubeVX
+How to use KubeVX
 
 1. You will first see a login page. Go ahead and create an account.
 2. Next, input data on your clusters so KubeVX can access it  <br>
@@ -59,7 +59,7 @@ How to Use KubeVX
 8. Alert page displays anomalies in your clusters so you can clearly see what needs fixing <br>
 ![alert](https://github.com/oslabs-beta/KubeVX/blob/main/alerts.gif?raw=true)
 
-How To Setup dependencies
+How to Setup Dependencies <br>
 Make sure you have the requirements installed:
 MacOS
 Homebrew
