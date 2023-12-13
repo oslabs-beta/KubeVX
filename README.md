@@ -46,17 +46,17 @@ How to use KubeVX
 2. Next, input data on your clusters so KubeVX can access it  <br>
 ![add cluster](https://github.com/oslabs-beta/KubeVX/blob/main/src/public/assets/loginAndAdd.gif)
 3. You should be able to see metrics graphs under Dashboard  <br>
-![dashboard](https://github.com/oslabs-beta/KubeVX/blob/main/dashboard.gif)
+![dashboard](https://github.com/oslabs-beta/KubeVX/blob/main/src/public/assets/dashboard.gif)
 4. Cluster View features an AI chatbot powered by the OpenAI API. You will have to purchase an Open AI API key to use this feature. After purchasing, input your API key in this format "OPENAI_API_KEY={insert api Key}" in a .env file in your root folder. The logic to access this key is already built out at the top of AIController.js . The chatbot is programmed to only answer K8s related questions.  <br>
-![clusterview AI](https://github.com/oslabs-beta/KubeVX/blob/main/clusterAndAI.gif)
+![clusterview AI](https://github.com/oslabs-beta/KubeVX/blob/main/src/public/assets/clusterAndAI.gif)
 5. This is the learn kubernetes page. Click around and see definitions of each term. <br>
-![learn k8s](https://github.com/oslabs-beta/KubeVX/blob/main/learnkubernetes.gif)  
+![learn k8s](https://github.com/oslabs-beta/KubeVX/blob/main/src/public/assets/learnkubernetes.gif)
 6. You can use the custom metrics if you want to access specific information about your cluster that’s not displayed on the dashboard  <br>
-![custom metrics](https://github.com/oslabs-beta/KubeVX/blob/main/customMetrics.gif)
+![custom metrics](https://github.com/oslabs-beta/KubeVX/blob/main/src/public/assets/customMetrics.gif)
 7. The logs provide information of your cluster’s status while running <br>
-![logs](https://github.com/oslabs-beta/KubeVX/blob/main/logs.gif)
+![logs](https://github.com/oslabs-beta/KubeVX/blob/main/src/public/assets/logs.gif)
 8. Alert page displays anomalies in your clusters so you can clearly see what needs fixing <br>
-![alert](https://github.com/oslabs-beta/KubeVX/blob/main/alerts.gif)
+![alert](https://github.com/oslabs-beta/KubeVX/blob/main/src/public/assets/alerts.gif)
 
 How to Setup Dependencies <br>
 Make sure you have the requirements installed:
