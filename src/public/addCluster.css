@@ -19,15 +19,15 @@ body {
   border-radius: 30px;
   border: 1px solid #6ca9e5;
   background-color: #fafaf8;
-  /* margin: 20px 500px; */
+  margin: 200px 500px;
 }
 
 .formContainer h1 {
-  color: #08102f; /* Text color for the heading */
+  color: #08102f; 
 }
 
 .formContainer label {
-  color: #08102f; /* Text color for labels */
+  color: #08102f; 
 }
 
 .formContainer input {
@@ -36,22 +36,22 @@ body {
   margin-bottom: 15px;
   border: 1px solid #393e46;
   border-radius: 15px;
-  /* background-color: #08102F; */
   color: #08102f;
 }
 
 .formContainer button {
-  width: 100%;
+  width: 108%;
   padding: 10px;
   border: none;
   border-radius: 15px;
-  background-color: #287ece;
+  background-color: #3080cc;
   color: #fff;
   font-size: 16px;
   cursor: pointer;
-  margin: 10px;
+  margin-top: 15px;
+  margin-bottom: 30px;
 }
 
 .formContainer button:hover {
-  background-color: #21619e;
+  background-color: #5b9ee1;
 }

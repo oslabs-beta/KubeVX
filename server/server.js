@@ -6,6 +6,7 @@ const MongoStore = require('connect-mongo');
 const cors = require('cors');
 const path = require('path');
 
+require('dotenv').config()
 
 const app = express();
 const port = 3001;
@@ -20,10 +21,10 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
   store: MongoStore.create({
-    mongoUrl: 'mongodb+srv://kubevx:letmein123@cluster0.zvkmoiz.mongodb.net/?retryWrites=true&w=majority'
+    mongoUrl: process.env.MONGO_URL,
   }),
   cookie: {
-    maxAge: 1000 * 60 * 60 * 24
+    maxAge: 1000 * 60 * 60 * 24 // 1 day
   }
 }));
 
@@ -35,6 +36,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/', router);
 
 app.use(express.static(path.join(__dirname, '../src/public')));
+app.use(express.static(path.join(__dirname, '../dist/')));
 
 // Enable collection of default metrics
 prometheus.collectDefaultMetrics();
@@ -51,6 +53,22 @@ app.get('/', (req, res) => {
   // Increment the custom metric on each request
   httpRequestCount.inc();
   res.send('Hello World!');
+});
+
+// CATCH-ALL ROUTE HANDLER
+app.use('*', (req, res) => res.sendStatus(404));
+
+// GLOBAL ERROR HANDLER
+app.use((err, req, res, next) => {
+  const defaultErr = {
+    log: 'Express error handler caught unknown middleware error',
+    status: 500,
+    message: { err: 'An error occurred' },
+  };
+  const errorObj = Object.assign(defaultErr, err);
+  console.log(errorObj.log);
+
+  return res.status(errorObj.status).send(errorObj.message);
 });
 
 app.listen(port, () => {

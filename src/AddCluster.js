@@ -10,6 +10,8 @@ const AddCluster = () => {
     image: 'nginx:latest',
     containerPort: 80,
     servicePort: 80,
+    deploymentFilePath: '', 
+    serviceFilePath: '',    
   });
 
   const handleChange = (e) => {
@@ -34,7 +36,7 @@ const AddCluster = () => {
         console.log(responseData);
         history.push('/maindashboard');
       } else {
-        console.error('Failed to update YAML files');
+        console.error('Failed to update and apply YAML files');
       }
     } catch (error) {
       console.error(error);
@@ -90,6 +92,26 @@ const AddCluster = () => {
             />
           </label>
           <br />
+          <label>
+            Deployment File Path
+            <input
+              type="text"
+              name="deploymentFilePath"
+              value={formData.deploymentFilePath}
+              onChange={handleChange}
+            />
+          </label>
+          <br />
+          <label>
+            Service File Path
+            <input
+              type="text"
+              name="serviceFilePath"
+              value={formData.serviceFilePath}
+              onChange={handleChange}
+            />
+          </label>
+          <br />
           <button type="submit">Add</button>
         </form>
       </div>
@@ -98,3 +120,4 @@ const AddCluster = () => {
 };
 
 export default AddCluster;
+

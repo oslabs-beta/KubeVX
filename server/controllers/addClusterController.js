@@ -1,18 +1,28 @@
-const fs = require('fs');
+const { execSync } = require('child_process');
 const path = require('path');
+const fs = require('fs');
 
 const addClusterController = {};
 
 addClusterController.add = (req, res) => {
   try {
-    const { replicas, image, containerPort, servicePort } = req.body;
+    const {
+      replicas,
+      image,
+      containerPort,
+      servicePort,
+      deploymentFilePath,
+      serviceFilePath,
+    } = req.body;
 
     // Update the webapp-deployment.yaml file
-    const deploymentFilePath = path.join(
-      __dirname,
-      '../../webapp-deployment.yaml'
+    const absoluteDeploymentFilePath = path.resolve(deploymentFilePath);
+    // console.log('Absolute Deployment File Path:', absoluteDeploymentFilePath);
+
+    let deploymentFileContent = fs.readFileSync(
+      absoluteDeploymentFilePath,
+      'utf-8'
     );
-    let deploymentFileContent = fs.readFileSync(deploymentFilePath, 'utf-8');
 
     deploymentFileContent = deploymentFileContent.replace(
       /replicas: \d+/,
@@ -27,11 +37,13 @@ addClusterController.add = (req, res) => {
       `containerPort: ${containerPort}`
     );
 
-    fs.writeFileSync(deploymentFilePath, deploymentFileContent);
+    fs.writeFileSync(absoluteDeploymentFilePath, deploymentFileContent);
 
     // Update the webapp-service.yaml file
-    const serviceFilePath = path.join(__dirname, '../../webapp-service.yaml');
-    let serviceFileContent = fs.readFileSync(serviceFilePath, 'utf-8');
+    const absoluteServiceFilePath = path.resolve(serviceFilePath);
+    // console.log('Absolute Service File Path:', absoluteServiceFilePath);
+
+    let serviceFileContent = fs.readFileSync(absoluteServiceFilePath, 'utf-8');
 
     serviceFileContent = serviceFileContent.replace(
       /port: \d+/,
@@ -42,9 +54,22 @@ addClusterController.add = (req, res) => {
       `targetPort: ${servicePort}`
     );
 
-    fs.writeFileSync(serviceFilePath, serviceFileContent);
+    fs.writeFileSync(absoluteServiceFilePath, serviceFileContent);
 
-    res.json({ success: true, message: 'YAML files updated successfully' });
+    // Execute kubectl apply commands
+    const deployCmd = `kubectl apply -f ${absoluteDeploymentFilePath}`;
+    const serviceCmd = `kubectl apply -f ${absoluteServiceFilePath}`;
+
+    execSync(deployCmd);
+    console.log('Deployment command executed successfully.');
+    
+    execSync(serviceCmd);
+    console.log('Service command executed successfully.');
+
+    res.json({
+      success: true,
+      message: 'YAML files updated and applied successfully',
+    });
   } catch (error) {
     console.error(error);
     res.status(500).json({ success: false, message: 'Internal Server Error' });
