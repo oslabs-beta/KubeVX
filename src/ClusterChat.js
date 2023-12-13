@@ -30,12 +30,7 @@ const ClusterChat = ({ clusterData }) => {
       const data = await response.json();
       console.log('data:', data);
       setConvoHistory(data.convoHistory);
-      //   if (userQuestion) {
-      //     setMessageList((prevMessages) => [
-      //       ...prevMessages,
-      //       { type: 'user', message: userQuestion },
-      //     ]);
-      //   }
+    
       setMessageList((prevMessages) => [
         ...prevMessages,
         { type: 'ai', message: data.sanitizedResponse },

@@ -1,10 +1,7 @@
 const express = require('express');
 const generatePrompt = require('./generatePrompt');
 
-const apiKey = process.env.OPENAI_API_KEY;
 const initializer = `Send me a message giving me an overview of my k8s cluster structure. Start with "Your kubernetes cluster consists of ..."`;
-
-console.log('apiKey:', apiKey);
 
 const AIController = {};
 
@@ -30,7 +27,7 @@ AIController.sendMessage = async (req, res, next) => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer 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`, // add process api key stuff
+        Authorization: `Bearer ${process.env.OPENAI_API_KEY}`, // add process api key 
       },
       body: JSON.stringify({
         model: 'gpt-3.5-turbo',

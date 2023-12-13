@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: mai033/kubevx:1.0
+    image: mai033/kubevx:2.0
     ports:
       - "3001:3001"
       - "7070:7070"

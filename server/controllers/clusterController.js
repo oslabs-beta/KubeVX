@@ -32,15 +32,6 @@ clusterController.fetchk8sComponents = async (req, res) => {
             services: services.body.items.map(service => service.metadata.name), serviceToPods,
             deployments: deployments.body.items.map(deployment => deployment.metadata.name)
         });
-        // console.log('data:', {
-        //     nodes: nodes.body.items.map(node => node.metadata.name),
-        //     pods: pods.body.items.map(pod => ({
-        //         name: pod.metadata.name,
-        //         nodeName: pod.spec.nodeName
-        //     })),
-        //     services: services.body.items.map(service => service.metadata.name), serviceToPods,
-        //     deployments: deployments.body.items.map(deployment => deployment.metadata.name)
-        // })
     } catch (err) {
         console.error('Error fetching Kubernetes components:', err);
         res.status(500).send('Error fetching Kubernetes components')
@@ -51,9 +42,5 @@ const matchLabels = (podLabels, serviceSelector) => {
     if (!podLabels || !serviceSelector) return false;
     return Object.keys(serviceSelector).every(key => serviceSelector[key] === podLabels[key]);
 }
-
-// fetchk8sComponents()
-//     .then(components => console.log('Kubernetes Components:', components))
-//     .catch(err => console.error(err));
 
 module.exports = clusterController;

@@ -23,4 +23,5 @@ EXPOSE 3001
 EXPOSE 7070
 
 # Define the command to run your application
-CMD ["npm", "run", "dev"]
+CMD ["npm", "start"]
+

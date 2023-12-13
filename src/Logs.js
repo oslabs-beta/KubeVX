@@ -22,8 +22,7 @@ function Logs({ namespace }) {
     }
     return logs;
   };
-  // console.log('logs filtered', filterByNamespace());
-  // return <LogsTable data={filterByNamespace()} namespace={namespace} />;
+  
   return (
     <div className="logsContainer">
       <Navigation className="navigation" />

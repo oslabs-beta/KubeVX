@@ -38,7 +38,7 @@ const Navigation = () => {
       </Link>
 
       <div className="nav-bottom">
-        {user ? (
+        {/* {user ? (
           <Link to="/logout" className="nav-item">
             Logout
           </Link>
@@ -46,7 +46,10 @@ const Navigation = () => {
           <Link to="/" className="nav-item">
             Login
           </Link>
-        )}
+        )} */}
+        <Link to="/logout" className="nav-item">
+          Logout
+        </Link>
       </div>
     </div>
   );

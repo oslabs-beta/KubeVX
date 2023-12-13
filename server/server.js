@@ -21,7 +21,7 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
   store: MongoStore.create({
-    mongoUrl: 'mongodb+srv://kubevx:letmein123@cluster0.zvkmoiz.mongodb.net/?retryWrites=true&w=majority'
+    mongoUrl: process.env.MONGO_URL,
   }),
   cookie: {
     maxAge: 1000 * 60 * 60 * 24 // 1 day
@@ -36,6 +36,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/', router);
 
 app.use(express.static(path.join(__dirname, '../src/public')));
+app.use(express.static(path.join(__dirname, '../dist/')));
 
 // Enable collection of default metrics
 prometheus.collectDefaultMetrics();

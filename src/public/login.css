@@ -4,7 +4,7 @@
   align-items: center;
   height: 100vh;
   background-color: #08102F; 
-  font-family: Verdana, Geneva, Tahoma, sans-serif; /* Consistent font */
+  font-family: Verdana, Geneva, Tahoma, sans-serif; 
 }
 
 .login-form {
@@ -17,7 +17,7 @@
 
 .login-form h2 {
   margin-bottom: 20px;
-  color: #08102F; /* Dark color for the heading */
+  color: #08102F; 
 }
 
 .login-form input {
@@ -34,13 +34,13 @@
   margin-bottom: 10px;
   border: none;
   border-radius: 15px;
-  background-color: #3080cc; /* Darker on hover */
+  background-color: #3080cc; 
   color: white;
   cursor: pointer;
 }
 
 .login-form button:hover {
-  background-color: #5b9ee1; /* Primary button color */
+  background-color: #5b9ee1; 
 }
 
 .back-to-dashboard {
@@ -49,7 +49,7 @@
 }
 
 .back-to-dashboard a {
-  color: #3080cc; /* Same as button color for consistency */
+  color: #3080cc; 
   text-decoration: none;
 }
 

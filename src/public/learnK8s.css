@@ -1,5 +1,5 @@
 body {
-  background-color: #08102F;
+  background-color: #08102f;
 }
 
 .learnK8s {
@@ -7,20 +7,6 @@ body {
   height: 100vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-/* .navigation {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  background: #6CA9E5;
-  width: 220px; 
-  height: 100vh;
-  border-radius: 15px;
-  margin: 5px;
-  font-size: 16px;
-  font-weight: bold; 
-  align-self: center; 
-} */
 
 .containerA {
   flex: 0 0 60%;
@@ -34,15 +20,15 @@ body {
   font-weight: bold;
 }
 
-.cluster, .master-node {
+.cluster,
+.master-node {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-
 .containerB {
-  flex: 0 0 18%; /* Changed width */
+  flex: 0 0 18%;
   background-color: #91abee;
   color: #393e46;
   padding: 20px;
@@ -54,27 +40,23 @@ body {
 }
 
 .containerC {
-  /* width: 80%; */
-  margin: 0 auto; /* Center the container horizontally */
-  /* border: 2px solid pink; */
+  margin: 0 auto;
   padding: 10px;
   border-radius: 20px;
   border: 2px solid #393e46;
   padding-left: 20px;
-  background-color: #5c85ee; /* Light pink background color, you can change this */
+  background-color: #5c85ee;
 }
 
 .worker-node {
-  /* width: 80%; */
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto; /* Center the container horizontally */
-  /* border: 2px solid pink; */
+  margin: 0 auto;
   border-radius: 20px;
   border: none;
   padding-left: 20px;
-  background-color: #5c85ee; /* Light pink background color, you can change this */
+  background-color: #5c85ee;
 }
 
 .cluster {
@@ -83,16 +65,10 @@ body {
 
 .containerD {
   display: grid;
-  grid-template-columns: repeat(
-    4,
-    1fr
-  ); /* Divide Container D into 4 equal columns */
-  gap: 20px; /* Add a gap between the columns */
-  margin: 0 auto; /* Center the container horizontally */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin: 0 auto;
   padding: 10px;
-  /* border: 2px solid #69ffee; 
-  border-radius: 20px;  */
-  /* background-color: #2bb484;  */
 }
 
 .api-server,
@@ -122,17 +98,10 @@ body {
 
 .containerE {
   display: grid;
-  grid-template-columns: repeat(
-    2,
-    1fr
-  ); /* Divide Container E into 2 equal columns */
-  gap: 20px; /* Add a gap between the columns */
-  /* border: 2px solid #393e46; */
-  /* border-radius: 20px; */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
   border: none;
-  /* padding: 10px; */
   margin-top: 27px;
-  /* background-color: rgb(128, 242, 108);  */
 }
 
 .containerG {
@@ -140,22 +109,19 @@ body {
   border: 2px solid #393e46;
   border-radius: 20px;
   padding: 20px;
-  background-color: #5c85ee; /* Light pink background color, you can change this */
+  background-color: #5c85ee; 
 }
 
 .containerF {
   display: grid;
-  grid-template-rows: auto auto; /* 2 rows with automatic sizing */
-  grid-template-columns: auto auto; /* 2 columns with automatic sizing */
-  grid-auto-rows: 1fr; /* Each row will have the same height */
-  grid-auto-columns: 1fr; /* Each column will have the same width */
-  gap: 10px; /* Add a gap between the grid items */
-  /* border: 2px solid #393e46; */
-  /* border-radius: 20px; */
+  grid-template-rows: auto auto; 
+  grid-template-columns: auto auto; 
+  grid-auto-rows: 1fr; 
+  grid-auto-columns: 1fr; 
+  gap: 10px; 
   border: none;
   padding: 10px;
   margin: 10px;
-  /* background-color: rgb(128, 242, 108);  */
 }
 
 .kubelet,
@@ -163,12 +129,12 @@ body {
   border: 2px solid #393e46;
   border-radius: 20px;
   padding: 20px;
-  background-color: #44eee1; /* Blue background color */
+  background-color: #44eee1; 
 }
 
 .pod-container {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr; /* Create 3 rows with equal height */
+  grid-template-rows: 1fr 1fr 1fr; 
   gap: 10px;
   border: 2px solid #393e46;
   border-radius: 20px;
@@ -177,7 +143,6 @@ body {
 }
 
 .container {
-  /* transform: translateX(15px); */
   border: 2px solid #393e46;
   border-radius: 20px;
   background-color: #e99ee4;
@@ -192,8 +157,6 @@ body {
   height: 100vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-/* Add the following CSS to your existing styles */
 
 .containerA:hover,
 .containerC:hover,
@@ -210,5 +173,5 @@ body {
 .kubelet:hover,
 .kube-proxy:hover,
 .pod:hover {
-  cursor: pointer; /* Change cursor to pointer on hover */
+  cursor: pointer; 
 }

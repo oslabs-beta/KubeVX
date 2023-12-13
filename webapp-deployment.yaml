@@ -20,26 +20,3 @@ spec:
           image: nginx:latest
           ports:
             - containerPort: 80
-
-# apiVersion: apps/v1
-# kind: Deployment
-# metadata:
-#   name: nginx-deployment
-# spec:
-#   replicas: 1
-#   selector:
-#     matchLabels:
-#       app: nginx
-#   template:
-#     metadata:
-#       labels:
-#         app: nginx
-#       annotations:
-#         prometheus.io/scrape: 'true'
-#         prometheus.io/port: '80'
-#     spec:
-#       containers:
-#       - name: nginx
-#         image: nginx:latest
-#         ports:
-#         - containerPort: 80
