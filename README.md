@@ -40,85 +40,167 @@
 
 Welcome to KubeVX, an open-source solution crafted to enhance Kubernetes development with intuitive and efficient data presentation. Equipped with a user-friendly interface and powerful features, KubeVX simplifies Kubernetes complexities, allowing developers to focus sharply on optimizing application performance.
 
-How to use KubeVX
+## Features
 
-1. You will first see a login page. Go ahead and create an account.
+1. You will first see a login page. Go ahead and create an account.<br><br>
+
 2. Next, input data on your clusters so KubeVX can access it  <br>
-![add cluster](https://github.com/oslabs-beta/KubeVX/blob/main/loginAndAdd.gif?raw=true)
-3. You should be able to see metrics graphs under Dashboard  <br>
-![dashboard](https://github.com/oslabs-beta/KubeVX/blob/main/dashboard.gif?raw=true)
-4. Cluster View features an AI chatbot powered by the OpenAI API. You will have to purchase an Open AI API key to use this feature. After purchasing, input your API key in this format "OPENAI_API_KEY={insert api Key}" in a .env file in your root folder. The logic to access this key is already built out at the top of AIController.js . The chatbot is programmed to only answer K8s related questions.  <br>
-![clusterview AI](https://github.com/oslabs-beta/KubeVX/blob/main/clusterAndAI?raw=true)
-5. This is the learn kubernetes page. Click around and see definitions of each term. <br>
-![learn k8s](https://github.com/oslabs-beta/KubeVX/blob/main/learnkubernetes.gif?raw=true)  
-6. You can use the custom metrics if you want to access specific information about your cluster that’s not displayed on the dashboard  <br>
-![custom metrics](https://github.com/oslabs-beta/KubeVX/blob/main/customMetrics.gif?raw=true)
-7. The logs provide information of your cluster’s status while running <br>
-![logs](https://github.com/oslabs-beta/KubeVX/blob/main/logs.gif?raw=true)
-8. Alert page displays anomalies in your clusters so you can clearly see what needs fixing <br>
-![alert](https://github.com/oslabs-beta/KubeVX/blob/main/alerts.gif?raw=true)
 
-How to Setup Dependencies <br>
+![add cluster](https://github.com/oslabs-beta/KubeVX/blob/main/src/public/assets/loginAndAdd.gif)<br><br><br>
+
+
+3. You should be able to see metrics graphs under Dashboard  <br>
+
+![dashboard](https://github.com/oslabs-beta/KubeVX/blob/main/src/public/assets/dashboard.gif)<br><br><br>
+
+4. Cluster View features an AI chatbot powered by the OpenAI API. You will have to purchase an Open AI API key to use this feature. After purchasing, input your API key in this format "OPENAI_API_KEY={insert api Key}" in a .env file in your root folder. The logic to access this key is already built out at the top of AIController.js . The chatbot is programmed to only answer K8s related questions.  <br>
+
+![clusterview AI](https://github.com/oslabs-beta/KubeVX/blob/main/src/public/assets/clusterAndAI.gif)<br><br><br>
+
+5. This is the learn kubernetes page. Click around and see definitions of each term. <br>
+
+![learn k8s](https://github.com/oslabs-beta/KubeVX/blob/main/src/public/assets/learnkubernetes.gif)<br><br><br>
+
+6. You can use the custom metrics if you want to access specific information about your cluster that’s not displayed on the dashboard  <br>
+
+![custom metrics](https://github.com/oslabs-beta/KubeVX/blob/main/src/public/assets/customMetrics.gif)<br><br><br>
+
+7. The logs provide information of your cluster’s status while running <br>
+
+![logs](https://github.com/oslabs-beta/KubeVX/blob/main/src/public/assets/logs.gif)<br><br><br>
+
+8. Alert page displays anomalies in your clusters so you can see what needs fixing <br>
+
+![alert](https://github.com/oslabs-beta/KubeVX/blob/main/src/public/assets/alerts.gif)
+
+## Setup
+
 Make sure you have the requirements installed:
-MacOS
-Homebrew
-Helm
-Docker
-Minikube
-Grafana
-Prometheus
+MacOS,
+Homebrew,
+Helm,
+Docker,
+Minikube,
+Grafana,
+Prometheus.
 
 Keep Docker running in the background.
 
 First, clone our repo <br>
-![cloning](https://github.com/oslabs-beta/KubeVX/blob/main/cloningKubeVX.gif?raw=true)
+<br>
+### Prometheus
+1. If you haven’t installed Helm, use homebrew: 
+```bash
+brew install helm
+```
+2. Run these commands to install prometheus and helm-charts:
+```bash
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+```
+```bash
+helm repo update
+```
+```bash
+helm install prometheus prometheus-community/prometheus
+```
+3. This following command routes the port for Prometheus:
+```bash
+kubectl port-forward svc/prometheus-server 9090:80 -n default
+```
 
-PROMETHEUS <br>
-If you haven’t installed Helm, use homebrew “brew install helm” <br>
-Run these commands to install prometheus and helm-charts
-1. helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
-2. helm repo update
-3. helm install prometheus prometheus-community/prometheus
-4. Run “kubectl port-forward svc/prometheus-server 9090:80 -n default” to route the port for prometheus
+### Grafana
+1. Run these two commands:
+```bash
+brew install grafana
+```
+```bash
+brew services start grafana
+```
 
-GRAFANA
-1. brew install grafana
-2. brew services start grafana
-3. Open your web browser and navigate to http://localhost:3000/
-4. Log in with the default credentials:
-Username: admin
+2. Open your web browser and navigate to http://localhost:3000/. 
+
+Log in with the default credentials: <br>
+Username: admin <br>
 Password: admin
-5. Prometheus has to be running on localhost:9090
-6. Search import dashboard -> input 1860 -> chose Prometheus -> import <br>
-    a. repeat step 6 for 7249 and 8588
 
-SET ALLOW EMBEDDING
-1. Run this command in your terminal “sudo pico /opt/homebrew/etc/grafana/grafana.ini” <br>
-   a. intel chip mac: sudo pico /usr/homebrew/etc/grafana/grafana.ini
-2. Scroll through the terminal with arrow keys to find the security section
-3. Set “allow_embedding = true” and make sure it is not commented out with a # 
-4. Control + O to write out, press return/enter key to confirm and control + X to exit 
-5. Run “brew services restart grafana” for changes to take effect.
-6. Go to http://localhost:3000/admin/settings on your browser to confirm
+Prometheus must be running on localhost:9090.
+
+3. Search import dashboard -> input 1860 -> chose Prometheus -> import <br>
+Repeat this step for 7249 and 8588.
 
 
-Run “minikube start” to initialize minikube. It may take a while if this is a first time setup.
+### Set Allow Embedding
+1. Run this command in your terminal:
+```bash
+sudo pico /opt/homebrew/etc/grafana/grafana.ini
+```
+If you have a Mac with the Intel chip, use this command instead:
+```bash
+sudo pico /usr/homebrew/etc/grafana/grafana.ini
+```
+
+2. Scroll through the terminal with arrow keys to find the security section.
+
+Set “allow_embedding = true” and make sure it is not commented out with a #. 
+
+Control + O to write out, press return/enter key to confirm and control + X to exit. 
+
+3. Run this command for changes to take effect:
+```bash
+brew services restart grafana
+```
+
+4. Go to http://localhost:3000/admin/settings on your browser to confirm.
+
+
+### Set up YAML files
+Run “minikube start” in your terminal to initialize minikube. It may take a while if this is a first-time setup.
 
 Now you need to apply the yaml files at the root directory of kubeVX:
 
-1. run “kubectl apply -f webapp-deployment.yaml” in your terminal
+Run the following commands in your terminal:
 
-2. Run this command in your terminal “kubectl apply -f webapp-service.yaml”
+```bash
+kubectl apply -f webapp-deployment.yaml
+```
 
-3. Run this command in your terminal “minikube service webapp-service”
+```bash
+kubectl apply -f webapp-service.yaml
+```
 
-Lastly, run these commands:
+```bash
+minikube service webapp-service
+```
 
-1. npm install
+### Start Application
 
-2. npm run build
+```bash
+npm install
+```
 
-3. npm run dev
+```bash
+npm run build
+```
+
+```bash
+npm run dev
+```
 
 Once you complete setting up, you can navigate to localhost:7070 in your browser to see the result.
 
+## Contributing
+
+Contributions play a vital role in the open-source community. Any contributions are greatly appreciated!
+
+- Fork the project.
+- Create and work off of your feature branch.
+- Create a pull request with a detailed description of your changes from your feature branch to dev branch.
+- Please let us know when PR submission is done. Once the changes are reviewed and approved, we will merge your code into the main repository.
+
+## Our Team
+
+- Jerry Trinh [GitHub](https://github.com/jtrrain) | [LinkedIn](https://www.linkedin.com/in/jtjerrytrinh/)
+- Jordan Palmer [GitHub](https://github.com/jordansjpalmer) | [LinkedIn](https://www.linkedin.com/in/jordansjpalmer/)
+- Mai Dinh [GitHub](https://github.com/mai033) | [LinkedIn](https://www.linkedin.com/in/mai-dahlia)
+- Patrick Wang [GitHub](https://github.com/pwang040) | [LinkedIn](https://www.linkedin.com/in/pwang040/)
+- Pegah Chendari [GitHub](https://github.com/PegahCh) | [LinkedIn](https://www.linkedin.com/in/pegah-chendari/)
