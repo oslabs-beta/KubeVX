@@ -43,30 +43,37 @@ Welcome to KubeVX, an open-source solution crafted to enhance Kubernetes develop
 ## Features
 
 1. You will first see a login page. Go ahead and create an account.
+
    
 2. Next, input data on your clusters so KubeVX can access it  <br>
 
 ![add cluster](https://github.com/oslabs-beta/KubeVX/blob/main/src/public/assets/loginAndAdd.gif)
 
+
 3. You should be able to see metrics graphs under Dashboard  <br>
 
 ![dashboard](https://github.com/oslabs-beta/KubeVX/blob/main/src/public/assets/dashboard.gif)
+
 
 4. Cluster View features an AI chatbot powered by the OpenAI API. You will have to purchase an Open AI API key to use this feature. After purchasing, input your API key in this format "OPENAI_API_KEY={insert api Key}" in a .env file in your root folder. The logic to access this key is already built out at the top of AIController.js . The chatbot is programmed to only answer K8s related questions.  <br>
 
 ![clusterview AI](https://github.com/oslabs-beta/KubeVX/blob/main/src/public/assets/clusterAndAI.gif)
 
+
 5. This is the learn kubernetes page. Click around and see definitions of each term. <br>
 
 ![learn k8s](https://github.com/oslabs-beta/KubeVX/blob/main/src/public/assets/learnkubernetes.gif)
+
 
 6. You can use the custom metrics if you want to access specific information about your cluster that’s not displayed on the dashboard  <br>
 
 ![custom metrics](https://github.com/oslabs-beta/KubeVX/blob/main/src/public/assets/customMetrics.gif)
 
+
 7. The logs provide information of your cluster’s status while running <br>
 
 ![logs](https://github.com/oslabs-beta/KubeVX/blob/main/src/public/assets/logs.gif)
+
 
 8. Alert page displays anomalies in your clusters so you can see what needs fixing <br>
 
@@ -88,11 +95,11 @@ Keep Docker running in the background.
 First, clone our repo <br>
 
 ### PROMETHEUS 
-If you haven’t installed Helm, use homebrew 
+1. If you haven’t installed Helm, use homebrew 
 ```bash
 brew install helm
 ```
-Run these commands to install prometheus and helm-charts
+2. Run these commands to install prometheus and helm-charts
 ```bash
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 ```
@@ -102,12 +109,13 @@ helm repo update
 ```bash
 helm install prometheus prometheus-community/prometheus
 ```
-This following command routes the port for Prometheus
+3. This following command routes the port for Prometheus
 ```bash
 kubectl port-forward svc/prometheus-server 9090:80 -n default
 ```
 
 ### GRAFANA
+1. Run these two commands
 ```bash
 brew install grafana
 ```
@@ -115,19 +123,19 @@ brew install grafana
 brew services start grafana
 ```
 
-Open your web browser and navigate to http://localhost:3000/
+2. Open your web browser and navigate to http://localhost:3000/ 
 
-Log in with the default credentials:
-Username: admin
+Log in with the default credentials: <br>
+Username: admin <br>
 Password: admin
 
 Prometheus has to be running on localhost:9090
 
-Search import dashboard -> input 1860 -> chose Prometheus -> import
+3. Search import dashboard -> input 1860 -> chose Prometheus -> import <br>
 Repeat this step for 7249 and 8588
 
 ### SET ALLOW EMBEDDING
-Run this command in your terminal
+1. Run this command in your terminal
 ```bash
 sudo pico /opt/homebrew/etc/grafana/grafana.ini
 ```
@@ -136,19 +144,20 @@ If you have a Mac with the Intel chip, use this command instead
 sudo pico /usr/homebrew/etc/grafana/grafana.ini
 ```
 
-Scroll through the terminal with arrow keys to find the security section
+2. Scroll through the terminal with arrow keys to find the security section
 
 Set “allow_embedding = true” and make sure it is not commented out with a # 
 
 Control + O to write out, press return/enter key to confirm and control + X to exit 
 
-Run this command for changes to take effect.
+3. Run this command for changes to take effect.
 ```bash
 brew services restart grafana
 ```
 
-Go to http://localhost:3000/admin/settings on your browser to confirm
+4. Go to http://localhost:3000/admin/settings on your browser to confirm
 
+### Set up YAML files
 Run “minikube start” in your terminal to initialize minikube. It may take a while if this is a first time setup.
 
 Now you need to apply the yaml files at the root directory of kubeVX:
