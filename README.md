@@ -29,7 +29,7 @@
 
 <p align="center" style="font-size: 1em">
 <a name="website" href="https://www.kubevx.com">Website</a>
-<a name="medium" href="https://medium.com/@kubevx">Medium</a>
+<a name="medium" href="https://medium.com/@kubevx123/kubevx-an-intuitive-kubernetes-devtool-39cafbb2fca9">Medium</a>
 <a name="linkedin" href="https://www.linkedin.com/company/kubevx">LinkedIn</a>
 </p>
 <br /><br />
