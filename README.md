@@ -40,7 +40,7 @@
 
 Welcome to KubeVX, an open-source solution crafted to enhance Kubernetes development with intuitive and efficient data presentation. Equipped with a user-friendly interface and powerful features, KubeVX simplifies Kubernetes complexities, allowing developers to focus sharply on optimizing application performance.
 
-## How to use KubeVX
+## Features
 
 1. You will first see a login page. Go ahead and create an account.
 2. Next, input data on your clusters so KubeVX can access it  <br>
@@ -146,12 +146,12 @@ Once you complete setting up, you can navigate to localhost:7070 in your browser
 
 ## Contributing
 
-Any contributions are always welcomed and appreciated!
+Contributions play a vital role in the open-source community. Any contributions are greatly appreciated!
 
 - Fork the project.
-- Create your feature branch.
-- Create a pull request detailing the changes you would like to introduce.
-- Create a new issue on GitHub.
+- Create and work off of your feature branch.
+- Create a pull request with detailed description of your changes from your feature branch to dev branch.
+- Inform us upon PR submission. Once the changes are reviewed and approved, we will merge your code into the main repository.
 
 ## Our Team
 
