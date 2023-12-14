@@ -25,6 +25,9 @@
 [![ReactTable](https://img.shields.io/badge/react%20table-FF4154?style=for-the-badge&logo=react%20table&logoColor=white)](https://www.npmjs.com/package/react-table)
 ![OAUTH](https://img.shields.io/badge/OAUTH2.0-grey?style=for-the-badge&logo=JSON%20web%20tokens)
 ![Bcrypt](https://img.shields.io/badge/BCRYPT-grey?style=for-the-badge&logo=letsencrypt)
+![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)
+![Babel](https://img.shields.io/badge/Babel-F9DC3e?style=for-the-badge&logo=babel&logoColor=black)
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 <!-- [![image]({BadgeURLHere})]() -->
 
 ---
