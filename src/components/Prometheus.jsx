@@ -8,7 +8,7 @@ const Prometheus = () => {
       <div className="iframe-row">
         <iframe
           title="Grafana Dashboard 1"
-          src="http://localhost:3000/d-solo/os6Bh8Omk/kubernetes-cluster?orgId=1&from=1701236854560&to=1701237279113&panelId=5"
+          src="http://localhost:3000/d-solo/4XuMd2Iiz/kubernetes-cluster-prometheus?orgId=1&from=1702601806723&to=1702603606723&panelId=30"
           width="400"
           height="200"
         ></iframe>
@@ -20,9 +20,16 @@ const Prometheus = () => {
           height="200"
         ></iframe>
 
-        <iframe
+        {/* <iframe
           title="Grafana Dashboard 3"
           src="http://localhost:3000/d-solo/rYdddlPWk/node-exporter-full?orgId=1&from=1701152616604&to=1701239016604&panelId=74"
+          width="400"
+          height="200"
+        ></iframe> */}
+
+        <iframe
+          title="Grafana Dashboard 3"
+          src="http://localhost:3000/d-solo/rYdddlPWk/node-exporter-full?orgId=1&from=1702517077971&to=1702603477972&panelId=74"
           width="400"
           height="200"
         ></iframe>
