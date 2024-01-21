@@ -73,7 +73,7 @@ Welcome to KubeVX, an open-source solution crafted to enhance Kubernetes develop
 
 ![logs](https://github.com/oslabs-beta/KubeVX/blob/main/src/public/assets/logs.gif)<br><br><br>
 
-8. Alert page displays anomalies in your clusters so you can see what needs fixing <br>
+8. Alert page displays abnomalies in your clusters so you can see what needs fixing <br>
 
 ![alert](https://github.com/oslabs-beta/KubeVX/blob/main/src/public/assets/alerts.gif)
 
@@ -205,6 +205,6 @@ Contributions play a vital role in the open-source community. Any contributions 
 
 - Jerry Trinh [GitHub](https://github.com/jtrrain) | [LinkedIn](https://www.linkedin.com/in/jtjerrytrinh/)
 - Jordan Palmer [GitHub](https://github.com/jordansjpalmer) | [LinkedIn](https://www.linkedin.com/in/jordansjpalmer/)
-- Mai Dinh [GitHub](https://github.com/mai033) | [LinkedIn](https://www.linkedin.com/in/mai-dahlia)
+- Mai Dinh [GitHub](https://github.com/mai033) | [LinkedIn](https://www.linkedin.com/in/dahlia-mai)
 - Patrick Wang [GitHub](https://github.com/pwang040) | [LinkedIn](https://www.linkedin.com/in/pwang040/)
 - Pegah Chendari [GitHub](https://github.com/PegahCh) | [LinkedIn](https://www.linkedin.com/in/pegah-chendari/)
